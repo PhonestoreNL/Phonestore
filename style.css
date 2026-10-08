@@ -195,3 +195,24 @@ a{color:inherit;text-decoration:none}
 
 .single-product-payment{display:inline-block;margin-top:24px;background:var(--blue);color:#fff;text-decoration:none;padding:14px 24px;border-radius:12px;font-weight:900;font-size:1rem;box-shadow:0 10px 22px rgba(21,151,255,.2);transition:.2s}
 .single-product-payment:hover{transform:translateY(-2px);filter:brightness(1.05)}
+
+
+/* Screenprotectors: lange productnamen blijven netjes binnen de kaarten */
+.catalog-group[data-category-group="screenprotectors"] .catalog-card{
+  min-height:390px;
+  height:auto;
+  overflow:hidden;
+}
+.catalog-group[data-category-group="screenprotectors"] .catalog-card h4{
+  max-width:100%;
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+.catalog-group[data-category-group="screenprotectors"] .product-view-button{
+  margin-top:auto;
+}
+@media(max-width:620px){
+  .catalog-group[data-category-group="screenprotectors"] .catalog-card{
+    min-height:350px;
+  }
+}
