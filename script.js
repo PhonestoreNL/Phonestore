@@ -14,50 +14,50 @@ const productBrand = document.querySelector('#selected-product-brand');
 const productPrice = document.querySelector('#selected-product-price');
 
 const productImages = {
-  "iPhone 15":"https://shopit.co.tz/images/detailed/122/iPhone-15.jpg",
-  "iPhone 16":"https://images.snoonu.com/brand_product/2025-03/2eaf2320-e32e-4f7c-ba06-442428e699fd_output.png",
+  "iPhone 15":"https://marketplace.webuyanyphone.com/cdn/shop/files/iPhone_15.png?v=1757344627",
+  "iPhone 16":"https://www.planeo.cz/-f52825---iVYgMLsS/iphone-16?field=data",
   "iPhone 17":"https://image.vandenborre.be/WEB/images/products/superzoom/apple_iphone-17-256gb-white_7654359_1.jpg",
   "Galaxy S25+":"https://www.chip.cz/sites/default/files/excel_import_zip/Samsung%20Galaxy%20S25%20Plus.jpg",
-  "Galaxy Z Flip 7":"https://images.price.tools/images/samsung-galaxy-z-flip7-cell-phone-l-Sv1jjCpK2.jpg",
+  "Galaxy Z Flip 7":"https://s13emagst.akamaized.net/products/99055/99054934/images/res_3203477782b714378614fb5c0d8bbe39.jpg",
   "Galaxy A56":"https://www.samsung-online.com.ua/uploads/shop/products/large/8f83d93860572ccfc20de6f81911de66.jpg",
-  "Oppo Find X9":"https://www.mistermobile.com.sg/wp-content/uploads/2025/10/Oppo-Find-X9-Titanium-Grey-1.png",
-  "Oppo A5 Pro":"https://felixindoshops.com/image/cache/catalog/OPPO/A5%20PRO/BLUE-550x550h.png",
-  "Oppo Reno 14":"https://media.power-cdn.net/images/h-005823fd5a1cc38392bbeede92d4330b/products/4162358/4162358_14_1200x1200_w_g.jpg",
+  "Oppo Find X9":"https://cdn.bestdenki.com.sg/media/catalog/product/cache/451ce3db112d5ee68c8ed8a187877d0f/2/1/2109391-1.jpg",
+  "Oppo A5 Pro":"https://smadshop.md/image/cache/product/telefony/mobilnye-telefony/oppo/mobilnyj-telefon-oppo-a5-pro-8-256gb-feather-blue-750x750.jpg",
+  "Oppo Reno 14":"https://ehabgroup.com/wp-content/uploads/2025/08/Untitled-design-38.png",
 
-  "AirPods 4":"https://cdn.ballicom.co.uk/?r=peyJpbWciOiJcL1wvaW1hZ2VzXC9jZG5cLzZiXC85MFwvNmI5MDcxYjctOWJiNy00Nzc0LWFjM2ItOGQyNzA3YTM5YTQ3LmpwZyIsInNpemUiOjg1MCwiZXh0ZW5zaW9uIjoianBnIn0%3Db",
-  "AirPods Pro":"https://product.hstatic.net/200000722513/product/mwp22_c3552981274e43acaa2fa999645a1b18_a93e0fa0e0334e0e907bda97d5fd5c90_master.png",
-  "AirPods Max":"https://ipac31.ru/image/cache/data/product/AirPods/8d44e630b31eb5105aa9b4bbd1a88413-1500x1500-700x700.jpeg",
-  "Samsung Buds 4 Pro":"https://media.ldlc.com/r1600/ld/products/00/06/32/30/LD0006323019.jpg",
+  "AirPods 4":"https://youget.pt/190765-large_default/auriculares-apple-airpods-4-white.jpg",
+  "AirPods Pro":"https://img.myshopline.com/image/store/1742938838999/pro2-b.png?h=2048&w=2048",
+  "AirPods Max":"https://muzikercdn.com/uploads/products/6389/638917/main_c44c05b9.jpg",
+  "Samsung Buds 4 Pro":"https://cellmigo.com/cdn/shop/files/r640-int-galaxy_buds-4_pro_black_1024x1024.jpg?v=1772598821",
   "Oppo Enco X3":"https://www.superplanshet.ru/images/OPPO_Enco_X3_82074144de5.jpg",
 
   "iPad A16":"https://istyle.ae/cdn/shop/files/IMG-16745587_m_jpg_1.jpg?v=1749028036",
-  "iPad M2":"https://nama.vn/img/upload/images/products/Apple/iPad/Air%20M2/space-gray.png",
-  "iPad A17 Pro":"https://www.usucampusstore.com/Website-Images/Item%20Images/Apple%20iPad%20Mini%20A17%20Pro.1.jpeg?resizeh=1200&resizeid=5&resizew=1200",
+  "iPad M2":"https://romex.ae/cdn/shop/files/iPadair2024SpaceGray.jpg",
+  "iPad A17 Pro":"https://istore.ph/cdn/shop/files/iPad_mini_5G_Space_Gray_PDP_Image_Position_2_WiFi__ROSA-EN.jpg?v=1732691700&width=1100",
   "Galaxy Tab S10+":"https://smartkoshk.com/cdn/shop/files/2_962d3751-5f53-47c2-8e1a-20e7ba14ff48.png?v=1732449051&width=1920",
   "Oppo Pad 3":"https://metapod.com/cdn/shop/files/DM_20250119155559_001_23ef4f8c-df61-4359-8b47-a701f0784e27.jpg?v=1767860182&width=1946",
 
   "Apple Watch serie 10":"https://www.machines.com.my/cdn/shop/files/Apple_Watch_Series_10_46mm_GPS_Jet_Black_Aluminum_Sport_Band_Black_PDP_Image_Position_1__GBEN_77823829-f473-40ab-818d-07258bf4a524.jpg?v=1727184931",
-  "Apple Watch serie 11":"https://www.switch.sg/cdn/shop/files/IMG-18079955_m_jpeg_1_2c5492f3-d18f-4be6-bc56-e3e936776eff.jpg?v=1757490035",
-  "Apple Watch SE 3":"https://static01.galaxus.com/productimages/3/4/6/7/4/6/4/2/4/7/1/9/4/4/2/8/3/0/7/019933ad-b655-768e-907f-5146395f5b2e_sea.jpeg",
-  "Apple Watch Ultra 3":"https://multimedia.bbycastatic.ca/multimedia/products/1500x1500/194/19451/19451651.jpg",
-  "Galaxy Watch 8":"https://dam.elcorteingles.es/producto/www-001089060018788-00.jpg?height=1200&impolicy=Resize&width=1200",
+  "Apple Watch serie 11":"https://vsprod.vijaysales.com/media/catalog/product/a/p/apple_watch_series_11_42mm_gps_jet_black_aluminum_sport_band_black_pdp_image_position_1__en-in_5.jpg?fit=bounds&height=500&optimize=medium&width=500",
+  "Apple Watch SE 3":"https://media.binglee.com.au/cdn-cgi/image/fit%3Dscale-down%2Cf%3Dauto%2Cw%3D1079/a/f/8/3/af83fb2f9cbedb515b33a422f4c08a78cbfce5f9_Apple_MEH54XA_Smart_Watches_Hero_1.jpg",
+  "Apple Watch Ultra 3":"https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MYPD3ref_VW_34FR%2Bwatch-case-49-titanium-black-ultra3_VW_34FR%2Bwatch-face-49-ocean-ultra3_VW_34FR_GEO_HK?.v=VEREVGFsQzRDQXZXemdUckh4dmo3M2pDV2hhem5qNnpDenFtKzI1OXdzWjRaeVR4RW9XWXhWVHRHeXZEa3AwcDZpTzZlS09Bd0x4ZHpLanhpRFM3bEpiVmVXUVJPYnV1S0FZc3FMLzd3SDRjOUJ3L2xvMzd3UE9qbmZuSVYvRTJTY0FoZWJSU3NGVTFvMm9nQ3o5L2ZVaVFLdTFzYmxUaFFDNm1xa01lM2lVOFBQS2x2VWhqZG9GTVZlWWZiMG9CMEFOOTk2REk1TmtlVWE1WWZZSVQzY2tXeVJnaFVZQ09ETHV4Y3FuR3dPOA&bgc=fafafa&fmt=p-jpg&hei=720&qlt=80&trim=1&wid=752",
+  "Galaxy Watch 8":"https://www.youget.pt/239264-large_default/smartwatch-samsung-galaxy-watch-8-40mm-gps-prateado.jpg",
   "Oppo Watch X":"https://img.pchome.com.tw/cs/items/DYAV3ZA900HAKOX/000001_1716864863.jpg",
 
-  "iPhone 15 screenprotector":"https://i5.walmartimages.com/seo/Tempered-Glass-Screen-Protector-2-5D-for-Apple-iPhone-16-6-1-Clear_dbeadd4c-00fc-4f62-b1a5-983a51b4ca7e.63fa620cca0a36503123aa9baba75723.jpeg",
-  "iPhone 16 screenprotector":"https://i5.walmartimages.com/seo/Tempered-Glass-Screen-Protector-2-5D-for-Apple-iPhone-16-6-1-Clear_dbeadd4c-00fc-4f62-b1a5-983a51b4ca7e.63fa620cca0a36503123aa9baba75723.jpeg",
-  "iPhone 17 screenprotector":"https://i5.walmartimages.com/seo/Tempered-Glass-Screen-Protector-2-5D-for-Apple-iPhone-16-6-1-Clear_dbeadd4c-00fc-4f62-b1a5-983a51b4ca7e.63fa620cca0a36503123aa9baba75723.jpeg",
-  "Galaxy S25+ screenprotector":"https://i5.walmartimages.com/seo/Tempered-Glass-Screen-Protector-2-5D-for-Apple-iPhone-16-6-1-Clear_dbeadd4c-00fc-4f62-b1a5-983a51b4ca7e.63fa620cca0a36503123aa9baba75723.jpeg",
-  "Galaxy Z Flip 7 screenprotector":"https://i5.walmartimages.com/seo/Tempered-Glass-Screen-Protector-2-5D-for-Apple-iPhone-16-6-1-Clear_dbeadd4c-00fc-4f62-b1a5-983a51b4ca7e.63fa620cca0a36503123aa9baba75723.jpeg",
-  "Galaxy A56 screenprotector":"https://i5.walmartimages.com/seo/Tempered-Glass-Screen-Protector-2-5D-for-Apple-iPhone-16-6-1-Clear_dbeadd4c-00fc-4f62-b1a5-983a51b4ca7e.63fa620cca0a36503123aa9baba75723.jpeg",
-  "Oppo Find X9 screenprotector":"https://i5.walmartimages.com/seo/Tempered-Glass-Screen-Protector-2-5D-for-Apple-iPhone-16-6-1-Clear_dbeadd4c-00fc-4f62-b1a5-983a51b4ca7e.63fa620cca0a36503123aa9baba75723.jpeg",
-  "Oppo A5 Pro screenprotector":"https://i5.walmartimages.com/seo/Tempered-Glass-Screen-Protector-2-5D-for-Apple-iPhone-16-6-1-Clear_dbeadd4c-00fc-4f62-b1a5-983a51b4ca7e.63fa620cca0a36503123aa9baba75723.jpeg",
-  "Oppo Reno 14 screenprotector":"https://i5.walmartimages.com/seo/Tempered-Glass-Screen-Protector-2-5D-for-Apple-iPhone-16-6-1-Clear_dbeadd4c-00fc-4f62-b1a5-983a51b4ca7e.63fa620cca0a36503123aa9baba75723.jpeg",
+  "iPhone 15 screenprotector":"https://www.mybat.com/cdn/shop/files/mybat-pro-tempered-glass-screen-protector-25d-for-apple-iphone-15-61-180730.jpg?v=1762441396",
+  "iPhone 16 screenprotector":"https://www.mybat.com/cdn/shop/files/mybat-pro-tempered-glass-screen-protector-25d-for-apple-iphone-15-61-180730.jpg?v=1762441396",
+  "iPhone 17 screenprotector":"https://www.mybat.com/cdn/shop/files/mybat-pro-tempered-glass-screen-protector-25d-for-apple-iphone-15-61-180730.jpg?v=1762441396",
+  "Galaxy S25+ screenprotector":"https://www.mybat.com/cdn/shop/files/mybat-pro-tempered-glass-screen-protector-25d-for-apple-iphone-15-61-180730.jpg?v=1762441396",
+  "Galaxy Z Flip 7 screenprotector":"https://www.mybat.com/cdn/shop/files/mybat-pro-tempered-glass-screen-protector-25d-for-apple-iphone-15-61-180730.jpg?v=1762441396",
+  "Galaxy A56 screenprotector":"https://www.mybat.com/cdn/shop/files/mybat-pro-tempered-glass-screen-protector-25d-for-apple-iphone-15-61-180730.jpg?v=1762441396",
+  "Oppo Find X9 screenprotector":"https://www.mybat.com/cdn/shop/files/mybat-pro-tempered-glass-screen-protector-25d-for-apple-iphone-15-61-180730.jpg?v=1762441396",
+  "Oppo A5 Pro screenprotector":"https://www.mybat.com/cdn/shop/files/mybat-pro-tempered-glass-screen-protector-25d-for-apple-iphone-15-61-180730.jpg?v=1762441396",
+  "Oppo Reno 14 screenprotector":"https://www.mybat.com/cdn/shop/files/mybat-pro-tempered-glass-screen-protector-25d-for-apple-iphone-15-61-180730.jpg?v=1762441396",
 
-  "Powerbank zwart 20.000 mAh":"https://uk.cygnett.com/cdn/shop/files/CY4345PBCHE-1_2835bd88-0f97-4a5b-9995-e76679fee60f_2376x.png?v=1737590386",
+  "Powerbank zwart 20.000 mAh":"https://down-br.img.susercontent.com/file/br-11134275-7r98o-mad3ulx6d28f0e",
   "Powerbank roze 20.000 mAh":"https://media.falabella.com/falabellaPE/147490382_01/w%3D800%2Ch%3D800%2Cfit%3Dpad",
-  "Powerbank groen 20.000 mAh":"https://www.anacondastores.com/medias/productHero-SPOTWF-BP90229116-green.jpg?context=bWFzdGVyfGltYWdlc3wxODUwNHxpbWFnZS9qcGVnfGltYWdlcy9oMDkvaGEzLzE2ODAwMzk3MTY0NTc0L3Byb2R1Y3RIZXJvX1NQT1RXRl9CUDkwMjI5MTE2LWdyZWVuLmpwZ3w3ZDU5Yjk3ZGI5ZDdhMWViY2ZhZWU0ZTU1NDk0N2M2NzQ0NGMzMzQ3ZDRkMjdiMDUyMDM1YmFhYjc1ZTJlODlm",
-  "Apple oplader USB-C":"https://cdn-assets.office-partner.de/media/image/3e/09/d1/27422722_3P8jOGAvpjaj3E_600x600%402x.jpg?quality=90",
-  "Samsung oplader USB-C":"https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/936/PMP00002151790/full_image-1.jpeg",
+  "Powerbank groen 20.000 mAh":"https://www.cygnett.com/cdn/shop/files/CY4750PBCHE-1_1024x1024.png?v=1706762712",
+  "Apple oplader USB-C":"https://britishmodules.com/cdn/shop/files/Apple20WUSB-CPowerAdapter.png?v=1775051934",
+  "Samsung oplader USB-C":"https://media.falabella.com/falabellaPE/119143732_01/public",
   "Oppo oplader USB-C":"https://a.allegroimg.com/original/112e4a/1dc887574b2db083f1970ef514b5/Ladowarka-Sieciowa-Oppo-65W-USB-C-GaN-SuperVooc-VCA7JCEH-Kabel-USB-TYP-C"
 };
 
@@ -144,6 +144,10 @@ document.querySelectorAll('.product-select').forEach(card => {
     image.alt = name;
     image.addEventListener('error', () => {
       image.classList.add('image-failed');
+      if (!image.dataset.fallbackTried) {
+        image.dataset.fallbackTried = '1';
+        image.src = 'https://placehold.co/800x800/png?text=' + encodeURIComponent(name);
+      }
     }, {once:true});
   }
 });
