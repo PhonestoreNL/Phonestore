@@ -64,7 +64,7 @@ document.querySelectorAll('.product-select').forEach(card => {
     document.querySelectorAll('.product-select').forEach(item => item.classList.remove('selected'));
     card.classList.add('selected');
     const name = card.dataset.product || card.querySelector('h4')?.textContent || '';
-    const brand = card.querySelector('span:last-child')?.textContent || '';
+    const brand = card.querySelector('.product-brand')?.textContent || '';
     const price = card.querySelector('.product-price')?.textContent || '';
     if (productDetail) productDetail.hidden = false;
     if (productName) productName.textContent = name;
