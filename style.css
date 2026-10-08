@@ -494,3 +494,21 @@ body .info-card p,
 body .detail-card p{
   color:#c9d8ea!important;
 }
+
+
+/* Blauwe kaartkleur: exact dezelfde stijl voor Persoonlijk advies, Missie, Visie en Doelgroep */
+.info-card,
+.info-card.featured,
+.detail-card{
+  background:#0d2947!important;
+  color:#fff!important;
+  border-color:#21486b!important;
+}
+.info-card h3,
+.detail-card h3{
+  color:#fff!important;
+}
+.info-card p,
+.detail-card p{
+  color:#c9dff2!important;
+}
