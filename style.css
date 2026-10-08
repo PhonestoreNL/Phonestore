@@ -304,3 +304,19 @@ a{color:inherit;text-decoration:none}
     font-size:clamp(2rem,9vw,3rem);
   }
 }
+
+
+/* Screenprotectors weer 3 producten naast elkaar */
+.catalog-group[data-category-group="screenprotectors"] .catalog-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+@media(max-width:900px){
+  .catalog-group[data-category-group="screenprotectors"] .catalog-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+@media(max-width:620px){
+  .catalog-group[data-category-group="screenprotectors"] .catalog-grid{
+    grid-template-columns:1fr;
+  }
+}
