@@ -24,6 +24,18 @@
       </div>
     </section>
   </main>
-  <script src="script.js?v=20261008-product5"></script>
+  <script src="script.js?v=20261008-product6"></script>
+  <script>
+    (() => {
+      const product = new URLSearchParams(window.location.search).get('product') || '';
+      if (product === 'iPhone 16') {
+        const payment = document.querySelector('#single-product-payment');
+        if (payment) {
+          payment.href = 'https://nl.penworldwide.org/buybuttons/nl01114/btn/4bb340a5-3f65-4ea2-8761-cf287b7a6e3f/';
+          payment.hidden = false;
+        }
+      }
+    })();
+  </script>
 </body>
 </html>
