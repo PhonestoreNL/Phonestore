@@ -320,3 +320,21 @@ a{color:inherit;text-decoration:none}
     grid-template-columns:1fr;
   }
 }
+
+
+/* Screenprotector-productdetail: volledige naam op één regel */
+.single-product-page.screenprotector-detail .single-product-info h1,
+.single-product-page.screenprotector-detail #single-product-name{
+  font-size:1.55rem;
+  line-height:1.15;
+  letter-spacing:-.02em;
+  white-space:nowrap;
+  overflow:visible;
+}
+@media(max-width:760px){
+  .single-product-page.screenprotector-detail .single-product-info h1,
+  .single-product-page.screenprotector-detail #single-product-name{
+    font-size:1.45rem;
+    white-space:nowrap;
+  }
+}
