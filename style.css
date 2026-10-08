@@ -350,3 +350,23 @@ a{color:inherit;text-decoration:none}
 @media(max-width:620px){
   .assortment-picker{grid-template-columns:1fr;}
 }
+
+
+/* Betere tekstgrootte voor de assortiment-kaarten */
+.assortment-tab strong{
+  font-size:1.35rem;
+  line-height:1.2;
+}
+.assortment-tab span{
+  font-size:.78rem;
+}
+.assortment-tab small{
+  font-size:.9rem;
+}
+@media(max-width:900px){
+  .assortment-tab strong{font-size:1.25rem;}
+  .assortment-tab small{font-size:.86rem;}
+}
+@media(max-width:620px){
+  .assortment-tab strong{font-size:1.3rem;}
+}
