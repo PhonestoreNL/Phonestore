@@ -635,3 +635,13 @@ body .inner-section.soft .info-card p,
 body .inner-section.soft .info-card .number{
   color:#000!important;
 }
+
+
+/* Waarom PhoneStore: alle tekst binnen de drie blauwe blokken zwart */
+body .why-card,
+body .why-card h3,
+body .why-card p,
+body .why-card span,
+body .why-card .number{
+  color:#000!important;
+}
