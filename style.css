@@ -425,3 +425,13 @@ a{color:inherit;text-decoration:none}
 .page-panel:not(#panel-home) .inner-section p:not(.eyebrow){
   color:#c9d8ea;
 }
+
+
+/* Definitieve achtergrond voor alle niet-Home tabbladen/pagina's */
+.page-panel:not(#panel-home),
+.page-panel:not(#panel-home) > .inner-section,
+.page-panel:not(#panel-home) > .inner-section.soft,
+body:not(:has(#panel-home)) main,
+body:not(:has(#panel-home)) main > .inner-section{
+  background:var(--navy)!important;
+}
