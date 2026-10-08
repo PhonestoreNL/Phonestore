@@ -435,3 +435,45 @@ body:not(:has(#panel-home)) main,
 body:not(:has(#panel-home)) main > .inner-section{
   background:var(--navy)!important;
 }
+
+
+/* Alle inhoudsblokken dezelfde donkere stijl als "Persoonlijk advies" */
+.page-panel:not(#panel-home) .detail-card,
+.page-panel:not(#panel-home) .info-card,
+.page-panel:not(#panel-home) .product-box,
+.page-panel:not(#panel-home) .team-card,
+.page-panel:not(#panel-home) .contact-list > div,
+.page-panel:not(#panel-home) .catalog-card{
+  background:var(--navy)!important;
+  color:#fff!important;
+  border-color:#28415d!important;
+}
+
+.page-panel:not(#panel-home) .detail-card h3,
+.page-panel:not(#panel-home) .info-card h3,
+.page-panel:not(#panel-home) .product-box h3,
+.page-panel:not(#panel-home) .team-card h3,
+.page-panel:not(#panel-home) .catalog-card h4,
+.page-panel:not(#panel-home) .contact-list strong{
+  color:#fff!important;
+}
+
+.page-panel:not(#panel-home) .detail-card p,
+.page-panel:not(#panel-home) .info-card p,
+.page-panel:not(#panel-home) .team-card p,
+.page-panel:not(#panel-home) .contact-list span,
+.page-panel:not(#panel-home) .catalog-card .product-brand,
+.page-panel:not(#panel-home) .catalog-card > span:last-child{
+  color:#c9d8ea!important;
+}
+
+.page-panel:not(#panel-home) .chips span{
+  background:#0d1d33!important;
+  color:#fff!important;
+  border-color:#28415d!important;
+}
+
+.page-panel:not(#panel-home) .avatar{
+  background:#16314e!important;
+  color:#75bdff!important;
+}
