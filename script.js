@@ -210,8 +210,50 @@ const productPageImage = document.querySelector('#single-product-image');
 const productPageName = document.querySelector('#single-product-name');
 const productPageBrand = document.querySelector('#single-product-brand');
 const productPagePrice = document.querySelector('#single-product-price');
+const paymentLinks = {
+  "iPhone 15": "https://nl.penworldwide.org/buybuttons/nl01114/btn/7b961a93-d205-4d6c-a71c-ace218c286b9/",
+  "iPhone 16": "https://nl.penworldwide.org/buybuttons/nl01114/btn/4bb340a5-3f65-4ea2-8761-cf287b7a6e3f/",
+  "iPhone 17": "https://nl.penworldwide.org/buybuttons/nl01114/btn/c64d9937-fe61-44b4-9911-28cdd8272bd1/",
+  "Galaxy S25+": "https://nl.penworldwide.org/buybuttons/nl01114/btn/e6bbbcf4-daf2-49b5-8105-2461991aacd1/",
+  "Galaxy Z Flip 7": "https://nl.penworldwide.org/buybuttons/nl01114/btn/878725e1-f351-4d16-8345-ef3a3cee158b/",
+  "Galaxy A56": "https://nl.penworldwide.org/buybuttons/nl01114/btn/afb72202-3ec6-4f70-9b64-16a80511f428/",
+  "Oppo Find X9": "https://nl.penworldwide.org/buybuttons/nl01114/btn/532c8610-a621-4c97-a463-ef2e3d341dd0/",
+  "Oppo A5 Pro": "https://nl.penworldwide.org/buybuttons/nl01114/btn/abf6cb7e-bea9-4211-9a57-270bc5deef1f/",
+  "Oppo Reno 14": "https://nl.penworldwide.org/buybuttons/nl01114/btn/2e213e1c-d1cc-499c-bf26-2fceab90ad4a/",
+  "AirPods 4": "https://nl.penworldwide.org/buybuttons/nl01114/btn/56ebeff9-ff5a-444a-ab9b-818f5b4181b8/",
+  "AirPods Pro": "https://nl.penworldwide.org/buybuttons/nl01114/btn/7a1b7c97-fd07-467d-8641-afb4a5358adf/",
+  "AirPods Max": "https://nl.penworldwide.org/buybuttons/nl01114/btn/a14772ad-d443-4414-9ff6-00341381e9c5/",
+  "Samsung Buds 4 Pro": "https://nl.penworldwide.org/buybuttons/nl01114/btn/0578d44d-812f-4f92-81ed-b0b0152bc287/",
+  "Oppo Enco X3": "https://nl.penworldwide.org/buybuttons/nl01114/btn/fc2e6571-3359-40ca-9f0c-55e5015b6c24/",
+  "iPad A16": "https://nl.penworldwide.org/buybuttons/nl01114/btn/9c539c74-4c57-46ac-8a7e-d3b6515dba5a/",
+  "iPad M2": "https://nl.penworldwide.org/buybuttons/nl01114/btn/d2464711-95dd-444d-a98f-b03fcab4afad/",
+  "iPad A17 Pro": "https://nl.penworldwide.org/buybuttons/nl01114/btn/6c594fdd-b5d7-445e-8a8f-9bd1e371e355/",
+  "Galaxy Tab S10+": "https://nl.penworldwide.org/buybuttons/nl01114/btn/0681baf8-f81f-456b-8c94-6dd6e3b96d9e/",
+  "Oppo Pad 3": "https://nl.penworldwide.org/buybuttons/nl01114/btn/ffbcf706-4de0-41f1-8c7f-3dab55baf590/",
+  "Apple Watch serie 10": "https://nl.penworldwide.org/buybuttons/nl01114/btn/52265a8d-f55f-4a06-a9c9-39272a604fec/",
+  "Apple Watch serie 11": "https://nl.penworldwide.org/buybuttons/nl01114/btn/3a3e322a-0470-464a-938e-7a72490072c6/",
+  "Apple Watch SE 3": "https://nl.penworldwide.org/buybuttons/nl01114/btn/f1545e15-2cdf-4106-bc89-a17a40035369/",
+  "Apple Watch Ultra 3": "https://nl.penworldwide.org/buybuttons/nl01114/btn/51a93688-53b3-45ef-b70e-b097d2736efe/",
+  "Galaxy Watch 8": "https://nl.penworldwide.org/buybuttons/nl01114/btn/277d818d-8faa-4748-8b8a-86939215f521/",
+  "Oppo Watch X": "https://nl.penworldwide.org/buybuttons/nl01114/btn/a6710a38-f46d-4253-a260-bdb2440ed341/",
+  "iPhone 15 screenprotector": "https://nl.penworldwide.org/buybuttons/nl01114/btn/fab860d3-6b52-4e90-bc0c-0683bdb0656d/",
+  "iPhone 16 screenprotector": "https://nl.penworldwide.org/buybuttons/nl01114/btn/800ee841-e1f6-4b4d-ab4c-199178a83f35/",
+  "iPhone 17 screenprotector": "https://nl.penworldwide.org/buybuttons/nl01114/btn/01939b8f-0903-4536-985e-3efccfdf84a8/",
+  "Galaxy S25+ screenprotector": "https://nl.penworldwide.org/buybuttons/nl01114/btn/d2d82df6-b70e-420d-98bf-a080948a890b/",
+  "Galaxy Z Flip 7 screenprotector": "https://nl.penworldwide.org/buybuttons/nl01114/btn/e907f576-a213-4082-99a2-5056a145ca5d/",
+  "Galaxy A56 screenprotector": "https://nl.penworldwide.org/buybuttons/nl01114/btn/d0c5506a-4ba4-42be-a41d-14fedb8bc875/",
+  "Oppo Find X9 screenprotector": "https://nl.penworldwide.org/buybuttons/nl01114/btn/1650e07e-886d-401b-ae3b-232089a90818/",
+  "Oppo A5 Pro screenprotector": "https://nl.penworldwide.org/buybuttons/nl01114/btn/e867f1fe-7af2-45a9-834a-960481451222/",
+  "Oppo Reno 14 screenprotector": "https://nl.penworldwide.org/buybuttons/nl01114/btn/923e5713-e399-4432-a313-639058466100/",
+  "Powerbank zwart 20.000 mAh": "https://nl.penworldwide.org/buybuttons/nl01114/btn/55479977-0b31-42db-bfb1-b1973a52d26d/",
+  "Powerbank roze 20.000 mAh": "https://nl.penworldwide.org/buybuttons/nl01114/btn/b6106d7a-fa64-4dc7-9de9-e9ff4414fb04/",
+  "Powerbank groen 20.000 mAh": "https://nl.penworldwide.org/buybuttons/nl01114/btn/2b17ada6-e404-465f-9346-3f99c6cbff43/",
+  "Apple oplader USB-C": "https://nl.penworldwide.org/buybuttons/nl01114/btn/179d9a05-5c1f-40df-b0e5-c74dea3c9682/",
+  "Samsung oplader USB-C": "https://nl.penworldwide.org/buybuttons/nl01114/btn/3ea60490-fbc7-4dea-b482-41f5cf7abfc0/",
+  "Oppo oplader USB-C": "https://nl.penworldwide.org/buybuttons/nl01114/btn/69611dfd-8f1c-468b-8ef1-c6e6c9890e95/"
+};
+
 const productPagePayment = document.querySelector('#single-product-payment');
-const iphone15PaymentUrl = 'https://nl.penworldwide.org/buybuttons/nl01114/btn/7b961a93-d205-4d6c-a71c-ace218c286b9/';
 
 if (productPageImage && productPageName) {
   const productParam = new URLSearchParams(window.location.search).get('product') || '';
@@ -223,8 +265,9 @@ if (productPageImage && productPageName) {
     productPageBrand.textContent = brand;
     productPagePrice.textContent = price;
     if (productPagePayment) {
-      productPagePayment.hidden = productData !== 'iPhone 15';
-      productPagePayment.href = iphone15PaymentUrl;
+      const paymentUrl = paymentLinks[productData] || '';
+      productPagePayment.hidden = !paymentUrl;
+      if (paymentUrl) productPagePayment.href = paymentUrl;
     }
     productPageImage.src = productImages[productData];
     productPageImage.alt = productData;
