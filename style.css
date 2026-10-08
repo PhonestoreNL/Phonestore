@@ -407,3 +407,21 @@ a{color:inherit;text-decoration:none}
 .page-panel:not(#panel-home) .inner-section.soft{
   background:var(--light);
 }
+
+
+/* Tabbladen: hoofdcontent dezelfde donkere basis als Home */
+.page-panel:not(#panel-home) .inner-section{
+  background:var(--navy)!important;
+  color:#fff;
+}
+.page-panel:not(#panel-home) .inner-section.soft{
+  background:var(--navy)!important;
+  color:#fff;
+}
+.page-panel:not(#panel-home) .inner-section h2,
+.page-panel:not(#panel-home) .inner-section h3{
+  color:#fff;
+}
+.page-panel:not(#panel-home) .inner-section p:not(.eyebrow){
+  color:#c9d8ea;
+}
