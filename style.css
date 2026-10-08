@@ -535,3 +535,13 @@ body .info-card p,
 body .detail-card p{
   color:#c9dff2!important;
 }
+
+
+/* Eén duidelijke blauwe kleur voor alle grote informatieblokken */
+.info-card,
+.info-card.featured,
+.detail-card{
+  background:#123f66!important;
+  color:#fff!important;
+  border-color:#2a5f8f!important;
+}
