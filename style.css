@@ -565,3 +565,14 @@ body .detail-card p{
   color:#fff!important;
   border-color:var(--blue)!important;
 }
+
+
+/* Exact dezelfde kleur als de knop "Bekijk ons assortiment" */
+.info-card,
+.info-card.featured,
+.detail-card{
+  background:#1597ff!important;
+  background-image:none!important;
+  border-color:#1597ff!important;
+  color:#fff!important;
+}
