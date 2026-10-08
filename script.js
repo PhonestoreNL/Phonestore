@@ -13,53 +13,53 @@ const productName = document.querySelector('#selected-product-name');
 const productBrand = document.querySelector('#selected-product-brand');
 const productPrice = document.querySelector('#selected-product-price');
 
-function escapeXml(value) {
-  return String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[char]));
-}
+const productImages = {
+  "iPhone 15":"https://shopit.co.tz/images/detailed/122/iPhone-15.jpg",
+  "iPhone 16":"https://images.snoonu.com/brand_product/2025-03/2eaf2320-e32e-4f7c-ba06-442428e699fd_output.png",
+  "iPhone 17":"https://image.vandenborre.be/WEB/images/products/superzoom/apple_iphone-17-256gb-white_7654359_1.jpg",
+  "Galaxy S25+":"https://www.chip.cz/sites/default/files/excel_import_zip/Samsung%20Galaxy%20S25%20Plus.jpg",
+  "Galaxy Z Flip 7":"https://images.price.tools/images/samsung-galaxy-z-flip7-cell-phone-l-Sv1jjCpK2.jpg",
+  "Galaxy A56":"https://www.samsung-online.com.ua/uploads/shop/products/large/8f83d93860572ccfc20de6f81911de66.jpg",
+  "Oppo Find X9":"https://www.mistermobile.com.sg/wp-content/uploads/2025/10/Oppo-Find-X9-Titanium-Grey-1.png",
+  "Oppo A5 Pro":"https://felixindoshops.com/image/cache/catalog/OPPO/A5%20PRO/BLUE-550x550h.png",
+  "Oppo Reno 14":"https://media.power-cdn.net/images/h-005823fd5a1cc38392bbeede92d4330b/products/4162358/4162358_14_1200x1200_w_g.jpg",
 
-function colorFor(name) {
-  const colors = ['#168cff','#6e7bff','#20b8a6','#6c56d9','#3c7cff','#8995a5'];
-  let total = 0;
-  for (const char of name) total += char.charCodeAt(0);
-  return colors[total % colors.length];
-}
+  "AirPods 4":"https://cdn.ballicom.co.uk/?r=peyJpbWciOiJcL1wvaW1hZ2VzXC9jZG5cLzZiXC85MFwvNmI5MDcxYjctOWJiNy00Nzc0LWFjM2ItOGQyNzA3YTM5YTQ3LmpwZyIsInNpemUiOjg1MCwiZXh0ZW5zaW9uIjoianBnIn0%3Db",
+  "AirPods Pro":"https://product.hstatic.net/200000722513/product/mwp22_c3552981274e43acaa2fa999645a1b18_a93e0fa0e0334e0e907bda97d5fd5c90_master.png",
+  "AirPods Max":"https://ipac31.ru/image/cache/data/product/AirPods/8d44e630b31eb5105aa9b4bbd1a88413-1500x1500-700x700.jpeg",
+  "Samsung Buds 4 Pro":"https://media.ldlc.com/r1600/ld/products/00/06/32/30/LD0006323019.jpg",
+  "Oppo Enco X3":"https://www.superplanshet.ru/images/OPPO_Enco_X3_82074144de5.jpg",
 
-function productSvg(card) {
-  const group = card.closest('[data-category-group]')?.dataset.categoryGroup || 'accessoires';
-  const name = card.dataset.product || card.querySelector('h4')?.textContent || '';
-  const accent = colorFor(name);
-  const brand = card.querySelector('.product-brand')?.textContent || '';
+  "iPad A16":"https://istyle.ae/cdn/shop/files/IMG-16745587_m_jpg_1.jpg?v=1749028036",
+  "iPad M2":"https://nama.vn/img/upload/images/products/Apple/iPad/Air%20M2/space-gray.png",
+  "iPad A17 Pro":"https://www.usucampusstore.com/Website-Images/Item%20Images/Apple%20iPad%20Mini%20A17%20Pro.1.jpeg?resizeh=1200&resizeid=5&resizew=1200",
+  "Galaxy Tab S10+":"https://smartkoshk.com/cdn/shop/files/2_962d3751-5f53-47c2-8e1a-20e7ba14ff48.png?v=1732449051&width=1920",
+  "Oppo Pad 3":"https://metapod.com/cdn/shop/files/DM_20250119155559_001_23ef4f8c-df61-4359-8b47-a701f0784e27.jpg?v=1767860182&width=1946",
 
-  const base = '<rect width="600" height="420" rx="36" fill="#f5f8fc"/><circle cx="500" cy="80" r="140" fill="' + accent + '" opacity=".10"/><circle cx="100" cy="350" r="110" fill="' + accent + '" opacity=".06"/>';
+  "Apple Watch serie 10":"https://www.machines.com.my/cdn/shop/files/Apple_Watch_Series_10_46mm_GPS_Jet_Black_Aluminum_Sport_Band_Black_PDP_Image_Position_1__GBEN_77823829-f473-40ab-818d-07258bf4a524.jpg?v=1727184931",
+  "Apple Watch serie 11":"https://www.switch.sg/cdn/shop/files/IMG-18079955_m_jpeg_1_2c5492f3-d18f-4be6-bc56-e3e936776eff.jpg?v=1757490035",
+  "Apple Watch SE 3":"https://static01.galaxus.com/productimages/3/4/6/7/4/6/4/2/4/7/1/9/4/4/2/8/3/0/7/019933ad-b655-768e-907f-5146395f5b2e_sea.jpeg",
+  "Apple Watch Ultra 3":"https://multimedia.bbycastatic.ca/multimedia/products/1500x1500/194/19451/19451651.jpg",
+  "Galaxy Watch 8":"https://dam.elcorteingles.es/producto/www-001089060018788-00.jpg?height=1200&impolicy=Resize&width=1200",
+  "Oppo Watch X":"https://img.pchome.com.tw/cs/items/DYAV3ZA900HAKOX/000001_1716864863.jpg",
 
-  let art = '';
-  if (group === 'smartphones') {
-    art = '<g transform="translate(175 35) rotate(-7 95 165)"><rect width="190" height="340" rx="34" fill="#151e2b" stroke="#92a0b3" stroke-width="5"/><rect x="10" y="10" width="170" height="320" rx="27" fill="#102b50"/><circle cx="95" cy="166" r="62" fill="' + accent + '" opacity=".5"/><circle cx="145" cy="45" r="13" fill="#111827"/><rect x="18" y="18" width="154" height="75" rx="20" fill="' + accent + '" opacity=".16"/></g><g transform="translate(280 60) rotate(8 95 165)"><rect width="190" height="340" rx="34" fill="#0f1722" stroke="#7e8b9d" stroke-width="5"/><rect x="10" y="10" width="170" height="320" rx="27" fill="#ffffff"/><rect x="29" y="29" width="132" height="282" rx="21" fill="' + accent + '" opacity=".12"/><circle cx="61" cy="61" r="15" fill="#0a0f18"/><circle cx="98" cy="61" r="15" fill="#0a0f18"/><text x="95" y="198" text-anchor="middle" font-size="24" font-family="Arial" fill="#162033" font-weight="700">' + escapeXml(brand) + '</text></g>';
-  } else if (group === 'audio') {
-    art = '<rect x="145" y="85" width="310" height="210" rx="46" fill="#ffffff" stroke="#c8d1dc" stroke-width="5"/><path d="M165 135 Q300 220 435 135 L435 255 Q300 330 165 255Z" fill="#eef3f8"/><rect x="205" y="230" width="48" height="115" rx="24" fill="#ffffff" stroke="#c8d1dc" stroke-width="4"/><rect x="347" y="230" width="48" height="115" rx="24" fill="#ffffff" stroke="#c8d1dc" stroke-width="4"/><ellipse cx="229" cy="128" rx="35" ry="28" fill="#ffffff" stroke="#c8d1dc" stroke-width="4"/><ellipse cx="371" cy="128" rx="35" ry="28" fill="#ffffff" stroke="#c8d1dc" stroke-width="4"/><path d="M190 120 Q230 92 250 120" fill="none" stroke="' + accent + '" stroke-width="10" stroke-linecap="round"/><path d="M350 120 Q390 92 410 120" fill="none" stroke="' + accent + '" stroke-width="10" stroke-linecap="round"/>';
-  } else if (group === 'tablets') {
-    art = '<rect x="125" y="55" width="350" height="310" rx="30" fill="#172231" stroke="#78879a" stroke-width="5"/><rect x="140" y="70" width="320" height="280" rx="22" fill="' + accent + '" opacity=".28"/><path d="M165 265 Q295 90 430 230" fill="none" stroke="#ffffff" stroke-width="24" opacity=".55" stroke-linecap="round"/><circle cx="300" cy="340" r="4" fill="#748195"/>';
-  } else if (group === 'smartwatches') {
-    art = '<rect x="245" y="15" width="110" height="100" rx="22" fill="#111927"/><rect x="245" y="305" width="110" height="100" rx="22" fill="#111927"/><rect x="175" y="95" width="250" height="230" rx="60" fill="#151f2d" stroke="#8693a5" stroke-width="6"/><rect x="196" y="116" width="208" height="188" rx="45" fill="#080f18"/><circle cx="300" cy="210" r="68" fill="' + accent + '" opacity=".22"/><text x="300" y="225" text-anchor="middle" font-size="34" font-family="Arial" fill="#ffffff" font-weight="700">10:09</text>';
-  } else if (group === 'screenprotectors') {
-    art = '<rect x="205" y="35" width="190" height="350" rx="32" fill="#ffffff" fill-opacity=".35" stroke="' + accent + '" stroke-width="8"/><rect x="226" y="56" width="148" height="308" rx="23" fill="' + accent + '" opacity=".08"/><circle cx="300" cy="63" r="8" fill="#8391a4"/><path d="M240 120 L365 285" stroke="#ffffff" stroke-width="12" opacity=".75" stroke-linecap="round"/>';
-  } else {
-    art = '<rect x="190" y="80" width="220" height="240" rx="28" fill="#dfe7ef" stroke="#8d9bad" stroke-width="6"/><rect x="215" y="105" width="170" height="155" rx="20" fill="#ffffff"/><rect x="265" y="260" width="70" height="28" rx="10" fill="' + accent + '" opacity=".7"/><circle cx="360" cy="125" r="10" fill="' + accent + '"/>';
-  }
+  "iPhone 15 screenprotector":"https://i5.walmartimages.com/seo/Tempered-Glass-Screen-Protector-2-5D-for-Apple-iPhone-16-6-1-Clear_dbeadd4c-00fc-4f62-b1a5-983a51b4ca7e.63fa620cca0a36503123aa9baba75723.jpeg",
+  "iPhone 16 screenprotector":"https://i5.walmartimages.com/seo/Tempered-Glass-Screen-Protector-2-5D-for-Apple-iPhone-16-6-1-Clear_dbeadd4c-00fc-4f62-b1a5-983a51b4ca7e.63fa620cca0a36503123aa9baba75723.jpeg",
+  "iPhone 17 screenprotector":"https://i5.walmartimages.com/seo/Tempered-Glass-Screen-Protector-2-5D-for-Apple-iPhone-16-6-1-Clear_dbeadd4c-00fc-4f62-b1a5-983a51b4ca7e.63fa620cca0a36503123aa9baba75723.jpeg",
+  "Galaxy S25+ screenprotector":"https://i5.walmartimages.com/seo/Tempered-Glass-Screen-Protector-2-5D-for-Apple-iPhone-16-6-1-Clear_dbeadd4c-00fc-4f62-b1a5-983a51b4ca7e.63fa620cca0a36503123aa9baba75723.jpeg",
+  "Galaxy Z Flip 7 screenprotector":"https://i5.walmartimages.com/seo/Tempered-Glass-Screen-Protector-2-5D-for-Apple-iPhone-16-6-1-Clear_dbeadd4c-00fc-4f62-b1a5-983a51b4ca7e.63fa620cca0a36503123aa9baba75723.jpeg",
+  "Galaxy A56 screenprotector":"https://i5.walmartimages.com/seo/Tempered-Glass-Screen-Protector-2-5D-for-Apple-iPhone-16-6-1-Clear_dbeadd4c-00fc-4f62-b1a5-983a51b4ca7e.63fa620cca0a36503123aa9baba75723.jpeg",
+  "Oppo Find X9 screenprotector":"https://i5.walmartimages.com/seo/Tempered-Glass-Screen-Protector-2-5D-for-Apple-iPhone-16-6-1-Clear_dbeadd4c-00fc-4f62-b1a5-983a51b4ca7e.63fa620cca0a36503123aa9baba75723.jpeg",
+  "Oppo A5 Pro screenprotector":"https://i5.walmartimages.com/seo/Tempered-Glass-Screen-Protector-2-5D-for-Apple-iPhone-16-6-1-Clear_dbeadd4c-00fc-4f62-b1a5-983a51b4ca7e.63fa620cca0a36503123aa9baba75723.jpeg",
+  "Oppo Reno 14 screenprotector":"https://i5.walmartimages.com/seo/Tempered-Glass-Screen-Protector-2-5D-for-Apple-iPhone-16-6-1-Clear_dbeadd4c-00fc-4f62-b1a5-983a51b4ca7e.63fa620cca0a36503123aa9baba75723.jpeg",
 
-  const svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420">' + base + art + '</svg>';
-  return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
-}
-
-function setupProductImages() {
-  document.querySelectorAll('.product-select').forEach(card => {
-    const img = card.querySelector('.product-img');
-    if (!img) return;
-    const name = card.dataset.product || card.querySelector('h4')?.textContent || 'Product';
-    img.src = productSvg(card);
-    img.alt = name;
-  });
-}
+  "Powerbank zwart 20.000 mAh":"https://uk.cygnett.com/cdn/shop/files/CY4345PBCHE-1_2835bd88-0f97-4a5b-9995-e76679fee60f_2376x.png?v=1737590386",
+  "Powerbank roze 20.000 mAh":"https://media.falabella.com/falabellaPE/147490382_01/w%3D800%2Ch%3D800%2Cfit%3Dpad",
+  "Powerbank groen 20.000 mAh":"https://www.anacondastores.com/medias/productHero-SPOTWF-BP90229116-green.jpg?context=bWFzdGVyfGltYWdlc3wxODUwNHxpbWFnZS9qcGVnfGltYWdlcy9oMDkvaGEzLzE2ODAwMzk3MTY0NTc0L3Byb2R1Y3RIZXJvX1NQT1RXRl9CUDkwMjI5MTE2LWdyZWVuLmpwZ3w3ZDU5Yjk3ZGI5ZDdhMWViY2ZhZWU0ZTU1NDk0N2M2NzQ0NGMzMzQ3ZDRkMjdiMDUyMDM1YmFhYjc1ZTJlODlm",
+  "Apple oplader USB-C":"https://cdn-assets.office-partner.de/media/image/3e/09/d1/27422722_3P8jOGAvpjaj3E_600x600%402x.jpg?quality=90",
+  "Samsung oplader USB-C":"https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/936/PMP00002151790/full_image-1.jpeg",
+  "Oppo oplader USB-C":"https://a.allegroimg.com/original/112e4a/1dc887574b2db083f1970ef514b5/Ladowarka-Sieciowa-Oppo-65W-USB-C-GaN-SuperVooc-VCA7JCEH-Kabel-USB-TYP-C"
+};
 
 function resetAssortmentView() {
   catalogOverview.forEach(item => item.hidden = false);
@@ -87,7 +87,6 @@ function showTab(tabName, updateUrl = true) {
   window.scrollTo({top:0,behavior:'auto'});
 
   if (tabName === 'assortiment') resetAssortmentView();
-
   if (updateUrl) history.replaceState(null, '', `#${tabName}`);
 }
 
@@ -106,14 +105,9 @@ menuButton?.addEventListener('click', () => {
 assortmentTabs.forEach(tab => {
   tab.addEventListener('click', () => {
     const category = tab.dataset.category;
-
     catalogOverview.forEach(item => item.hidden = true);
     if (catalogProductsView) catalogProductsView.hidden = false;
-
-    productPanels.forEach(panel => {
-      panel.classList.toggle('active', panel.dataset.categoryGroup === category);
-    });
-
+    productPanels.forEach(panel => panel.classList.toggle('active', panel.dataset.categoryGroup === category));
     if (categoryTitle) categoryTitle.textContent = tab.querySelector('strong')?.textContent || '';
     if (productDetail) productDetail.hidden = true;
     document.querySelectorAll('.product-select').forEach(item => item.classList.remove('selected'));
@@ -133,7 +127,6 @@ document.querySelectorAll('.product-select').forEach(card => {
     if (productBrand) productBrand.textContent = brand;
     if (productPrice) productPrice.textContent = price || '—';
   };
-
   card.addEventListener('click', selectProduct);
   card.addEventListener('keydown', event => {
     if (event.key === 'Enter' || event.key === ' ') {
@@ -143,7 +136,17 @@ document.querySelectorAll('.product-select').forEach(card => {
   });
 });
 
-setupProductImages();
+document.querySelectorAll('.product-select').forEach(card => {
+  const image = card.querySelector('.product-img');
+  const name = card.dataset.product || card.querySelector('h4')?.textContent || '';
+  if (image && productImages[name]) {
+    image.src = productImages[name];
+    image.alt = name;
+    image.addEventListener('error', () => {
+      image.classList.add('image-failed');
+    }, {once:true});
+  }
+});
 
 const startTab = window.location.hash.replace('#', '');
 showTab(startTab || 'home', false);
