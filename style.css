@@ -618,3 +618,9 @@ body .inner-section.soft .info-card *{
 body .two-col h2{
   color:var(--ink)!important;
 }
+
+
+/* Titel "Persoonlijk advies staat centraal." terug naar wit */
+body .two-col h2{
+  color:#fff!important;
+}
