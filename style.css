@@ -576,3 +576,17 @@ body .detail-card p{
   border-color:#1597ff!important;
   color:#fff!important;
 }
+
+
+/* Definitief: informatieblokken exact dezelfde kleur als Home-knop */
+body .page-panel:not(#panel-home) .info-card,
+body .page-panel:not(#panel-home) .info-card.featured,
+body .page-panel:not(#panel-home) .detail-card,
+body .info-card,
+body .info-card.featured,
+body .detail-card{
+  background:#1597ff!important;
+  background-image:none!important;
+  border-color:#1597ff!important;
+  color:#fff!important;
+}
