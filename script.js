@@ -38,7 +38,8 @@ menuButton?.addEventListener('click', () => {
 
 // Assortiment: eerst een categorie kiezen, daarna een product.
 const assortmentTabs = document.querySelectorAll('.assortment-tab');
-const productPanels = document.querySelectorAll('.product-choice-panel');
+const productPanels = document.querySelectorAll('[data-category-group]');
+
 const categoryTitle = document.querySelector('#selected-category-title');
 const productDetail = document.querySelector('#selected-product');
 const productName = document.querySelector('#selected-product-name');
@@ -53,7 +54,7 @@ assortmentTabs.forEach(tab => {
       item.classList.toggle('active', active);
       item.setAttribute('aria-selected', String(active));
     });
-    productPanels.forEach(panel => panel.classList.toggle('active', panel.dataset.products === category));
+    productPanels.forEach(panel => panel.classList.toggle('active', panel.dataset.categoryGroup === category));
     if (categoryTitle) categoryTitle.textContent = tab.querySelector('strong')?.textContent || '';
     if (productDetail) productDetail.hidden = true;
   });
