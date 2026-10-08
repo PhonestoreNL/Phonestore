@@ -13,6 +13,49 @@ const productName = document.querySelector('#selected-product-name');
 const productBrand = document.querySelector('#selected-product-brand');
 const productPrice = document.querySelector('#selected-product-price');
 
+const productDetails = {
+  "iPhone 15": {brand:"Apple", price:"€ 549"},
+  "iPhone 16": {brand:"Apple", price:"€ 599"},
+  "iPhone 17": {brand:"Apple", price:"€ 749"},
+  "Galaxy S25+": {brand:"Samsung", price:"€ 749"},
+  "Galaxy Z Flip 7": {brand:"Samsung", price:"€ 849"},
+  "Galaxy A56": {brand:"Samsung", price:"€ 349"},
+  "Oppo Find X9": {brand:"Oppo", price:"€ 849"},
+  "Oppo A5 Pro": {brand:"Oppo", price:"€ 229"},
+  "Oppo Reno 14": {brand:"Oppo", price:"€ 499"},
+  "AirPods 4": {brand:"Apple", price:"€ 149"},
+  "AirPods Pro": {brand:"Apple", price:"€ 249"},
+  "AirPods Max": {brand:"Apple", price:"€ 519"},
+  "Samsung Buds 4 Pro": {brand:"Samsung", price:"€ 199"},
+  "Oppo Enco X3": {brand:"Oppo", price:"€ 179"},
+  "iPad A16": {brand:"Apple", price:"€ 449"},
+  "iPad M2": {brand:"Apple", price:"€ 599"},
+  "iPad A17 Pro": {brand:"Apple", price:"€ 699"},
+  "Galaxy Tab S10+": {brand:"Samsung", price:"€ 749"},
+  "Oppo Pad 3": {brand:"Oppo", price:"€ 449"},
+  "Apple Watch serie 10": {brand:"Apple", price:"€ 399"},
+  "Apple Watch serie 11": {brand:"Apple", price:"€ 449"},
+  "Apple Watch SE 3": {brand:"Apple", price:"€ 249"},
+  "Apple Watch Ultra 3": {brand:"Apple", price:"€ 749"},
+  "Galaxy Watch 8": {brand:"Samsung", price:"€ 349"},
+  "Oppo Watch X": {brand:"Oppo", price:"€ 299"},
+  "iPhone 15 screenprotector": {brand:"Apple", price:"€ 17,50"},
+  "iPhone 16 screenprotector": {brand:"Apple", price:"€ 17,50"},
+  "iPhone 17 screenprotector": {brand:"Apple", price:"€ 17,50"},
+  "Galaxy S25+ screenprotector": {brand:"Samsung", price:"€ 17,50"},
+  "Galaxy Z Flip 7 screenprotector": {brand:"Samsung", price:"€ 17,50"},
+  "Galaxy A56 screenprotector": {brand:"Samsung", price:"€ 17,50"},
+  "Oppo Find X9 screenprotector": {brand:"Oppo", price:"€ 17,50"},
+  "Oppo A5 Pro screenprotector": {brand:"Oppo", price:"€ 17,50"},
+  "Oppo Reno 14 screenprotector": {brand:"Oppo", price:"€ 17,50"},
+  "Powerbank zwart 20.000 mAh": {brand:"Accessoire", price:"€ 30"},
+  "Powerbank roze 20.000 mAh": {brand:"Accessoire", price:"€ 30"},
+  "Powerbank groen 20.000 mAh": {brand:"Accessoire", price:"€ 30"},
+  "Apple oplader USB-C": {brand:"Apple", price:"€ 24,99"},
+  "Samsung oplader USB-C": {brand:"Samsung", price:"€ 17,50"},
+  "Oppo oplader USB-C": {brand:"Oppo", price:"€ 29,99"}
+};
+
 const productImages = {
   "iPhone 15":"https://marketplace.webuyanyphone.com/cdn/shop/files/iPhone_15.png?v=1757344627",
   "iPhone 16":"https://www.planeo.cz/-f52825---iVYgMLsS/iphone-16?field=data",
@@ -170,11 +213,9 @@ const productPagePrice = document.querySelector('#single-product-price');
 
 if (productPageImage && productPageName) {
   const productParam = new URLSearchParams(window.location.search).get('product') || '';
-  const productCard = Array.from(document.querySelectorAll('.product-select')).find(card => (card.dataset.product || '') === productParam);
-  const productData = productParam || productCard?.dataset.product || '';
-  const sourceCard = productCard;
-  const brand = sourceCard?.querySelector('.product-brand')?.textContent || '';
-  const price = sourceCard?.querySelector('.product-price')?.textContent || '';
+  const productData = productParam;
+  const brand = productDetails[productData]?.brand || '';
+  const price = productDetails[productData]?.price || '';
   if (productData && productImages[productData]) {
     productPageName.textContent = productData;
     productPageBrand.textContent = brand;
