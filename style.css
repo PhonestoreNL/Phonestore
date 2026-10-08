@@ -477,3 +477,20 @@ body:not(:has(#panel-home)) main > .inner-section{
   background:#16314e!important;
   color:#75bdff!important;
 }
+
+
+/* Losse pagina's: Missie/Visie/Doelgroep dezelfde donkere blokstijl */
+body .info-card,
+body .detail-card{
+  background:var(--navy)!important;
+  color:#fff!important;
+  border-color:#28415d!important;
+}
+body .info-card h3,
+body .detail-card h3{
+  color:#fff!important;
+}
+body .info-card p,
+body .detail-card p{
+  color:#c9d8ea!important;
+}
