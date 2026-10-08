@@ -39,6 +39,9 @@ menuButton?.addEventListener('click', () => {
 // Assortiment: eerst een categorie kiezen, daarna een product.
 const assortmentTabs = document.querySelectorAll('.assortment-tab');
 const productPanels = document.querySelectorAll('[data-category-group]');
+const catalogOverview = document.querySelectorAll('.catalog-overview');
+const catalogProductsView = document.querySelector('.catalog-products-view');
+const backToAssortments = document.querySelector('#back-to-assortments');
 
 const categoryTitle = document.querySelector('#selected-category-title');
 const productDetail = document.querySelector('#selected-product');
@@ -55,9 +58,22 @@ assortmentTabs.forEach(tab => {
       item.setAttribute('aria-selected', String(active));
     });
     productPanels.forEach(panel => panel.classList.toggle('active', panel.dataset.categoryGroup === category));
+    catalogOverview.forEach(item => item.hidden = true);
+    if (catalogProductsView) catalogProductsView.classList.add('active');
     if (categoryTitle) categoryTitle.textContent = tab.querySelector('strong')?.textContent || '';
     if (productDetail) productDetail.hidden = true;
+    document.querySelectorAll('.product-select').forEach(item => item.classList.remove('selected'));
   });
+});
+
+
+backToAssortments?.addEventListener('click', () => {
+  catalogOverview.forEach(item => item.hidden = false);
+  catalogProductsView?.classList.remove('active');
+  productPanels.forEach(panel => panel.classList.remove('active'));
+  if (productDetail) productDetail.hidden = true;
+  document.querySelectorAll('.product-select').forEach(item => item.classList.remove('selected'));
+  window.scrollTo({top:0,behavior:'smooth'});
 });
 
 document.querySelectorAll('.product-select').forEach(card => {
