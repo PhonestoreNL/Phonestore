@@ -7,9 +7,7 @@ function showTab(tabName, updateUrl = true) {
   const panel = document.querySelector(`[data-panel="${tabName}"]`);
   if (!panel) return;
 
-  panels.forEach(item => {
-    item.classList.toggle('active', item === panel);
-  });
+  panels.forEach(item => item.classList.toggle('active', item === panel));
 
   document.querySelectorAll('.nav a[data-tab]').forEach(link => {
     const active = link.dataset.tab === tabName;
@@ -20,14 +18,10 @@ function showTab(tabName, updateUrl = true) {
 
   nav?.classList.remove('open');
   menuButton?.setAttribute('aria-expanded', 'false');
-
-  // Begin ieder intern tabblad bovenaan, zonder naar een andere browserpagina te gaan.
   document.documentElement.scrollTop = 0;
   document.body.scrollTop = 0;
 
-  if (updateUrl) {
-    history.replaceState(null, '', `#${tabName}`);
-  }
+  if (updateUrl) history.replaceState(null, '', `#${tabName}`);
 }
 
 tabLinks.forEach(link => {
@@ -40,6 +34,50 @@ tabLinks.forEach(link => {
 menuButton?.addEventListener('click', () => {
   const open = nav.classList.toggle('open');
   menuButton.setAttribute('aria-expanded', String(open));
+});
+
+// Assortiment: eerst een categorie kiezen, daarna een product.
+const assortmentTabs = document.querySelectorAll('.assortment-tab');
+const productPanels = document.querySelectorAll('.product-choice-panel');
+const categoryTitle = document.querySelector('#selected-category-title');
+const productDetail = document.querySelector('#selected-product');
+const productName = document.querySelector('#selected-product-name');
+const productBrand = document.querySelector('#selected-product-brand');
+const productPrice = document.querySelector('#selected-product-price');
+
+assortmentTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const category = tab.dataset.category;
+    assortmentTabs.forEach(item => {
+      const active = item === tab;
+      item.classList.toggle('active', active);
+      item.setAttribute('aria-selected', String(active));
+    });
+    productPanels.forEach(panel => panel.classList.toggle('active', panel.dataset.products === category));
+    if (categoryTitle) categoryTitle.textContent = tab.querySelector('strong')?.textContent || '';
+    if (productDetail) productDetail.hidden = true;
+  });
+});
+
+document.querySelectorAll('.product-select').forEach(card => {
+  const selectProduct = () => {
+    document.querySelectorAll('.product-select').forEach(item => item.classList.remove('selected'));
+    card.classList.add('selected');
+    const name = card.dataset.product || card.querySelector('h4')?.textContent || '';
+    const brand = card.querySelector('span:last-child')?.textContent || '';
+    const price = card.querySelector('.product-price')?.textContent || '';
+    if (productDetail) productDetail.hidden = false;
+    if (productName) productName.textContent = name;
+    if (productBrand) productBrand.textContent = brand;
+    if (productPrice) productPrice.textContent = price || '—';
+  };
+  card.addEventListener('click', selectProduct);
+  card.addEventListener('keydown', event => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      selectProduct();
+    }
+  });
 });
 
 const startTab = window.location.hash.replace('#', '');
