@@ -20,7 +20,7 @@ const productImages = {
   "Galaxy S25+":"https://i5.walmartimages.com/seo/AT-T-Samsung-S25-PLUS-Mint-512GB_8d97f4b8-4e26-4a84-93dd-1d8fcaa1307e.9b1de40d5046eaad0bdf39654df1e31a.jpeg",
   "Galaxy Z Flip 7":"https://s13emagst.akamaized.net/products/99055/99054934/images/res_3203477782b714378614fb5c0d8bbe39.jpg",
   "Galaxy A56":"https://www.samsung-online.com.ua/uploads/shop/products/large/8f83d93860572ccfc20de6f81911de66.jpg",
-  "Oppo Find X9":"https://cdn.bestdenki.com.sg/media/catalog/product/cache/451ce3db112d5ee68c8ed8a187877d0f/2/1/2109391-1.jpg",
+  "Oppo Find X9":"https://media.power-cdn.net/images/h-a99dd70d17929dc4afb5cf2ade14b6ea/products/4199651/4199651_13_1200x1200_w_g.jpg",
   "Oppo A5 Pro":"https://smadshop.md/image/cache/product/telefony/mobilnye-telefony/oppo/mobilnyj-telefon-oppo-a5-pro-8-256gb-feather-blue-750x750.jpg",
   "Oppo Reno 14":"https://ehabgroup.com/wp-content/uploads/2025/08/Untitled-design-38.png",
 
@@ -39,7 +39,7 @@ const productImages = {
   "Apple Watch serie 10":"https://www.machines.com.my/cdn/shop/files/Apple_Watch_Series_10_46mm_GPS_Jet_Black_Aluminum_Sport_Band_Black_PDP_Image_Position_1__GBEN_77823829-f473-40ab-818d-07258bf4a524.jpg?v=1727184931",
   "Apple Watch serie 11":"https://vsprod.vijaysales.com/media/catalog/product/a/p/apple_watch_series_11_42mm_gps_jet_black_aluminum_sport_band_black_pdp_image_position_1__en-in_5.jpg?fit=bounds&height=500&optimize=medium&width=500",
   "Apple Watch SE 3":"https://media.binglee.com.au/cdn-cgi/image/fit%3Dscale-down%2Cf%3Dauto%2Cw%3D1079/a/f/8/3/af83fb2f9cbedb515b33a422f4c08a78cbfce5f9_Apple_MEH54XA_Smart_Watches_Hero_1.jpg",
-  "Apple Watch Ultra 3":"https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MYPD3ref_VW_34FR%2Bwatch-case-49-titanium-black-ultra3_VW_34FR%2Bwatch-face-49-ocean-ultra3_VW_34FR_GEO_HK?.v=VEREVGFsQzRDQXZXemdUckh4dmo3M2pDV2hhem5qNnpDenFtKzI1OXdzWjRaeVR4RW9XWXhWVHRHeXZEa3AwcDZpTzZlS09Bd0x4ZHpLanhpRFM3bEpiVmVXUVJPYnV1S0FZc3FMLzd3SDRjOUJ3L2xvMzd3UE9qbmZuSVYvRTJTY0FoZWJSU3NGVTFvMm9nQ3o5L2ZVaVFLdTFzYmxUaFFDNm1xa01lM2lVOFBQS2x2VWhqZG9GTVZlWWZiMG9CMEFOOTk2REk1TmtlVWE1WWZZSVQzY2tXeVJnaFVZQ09ETHV4Y3FuR3dPOA&bgc=fafafa&fmt=p-jpg&hei=720&qlt=80&trim=1&wid=752",
+  "Apple Watch Ultra 3":"https://multimedia.bbycastatic.ca/multimedia/products/1500x1500/194/19451/19451651.jpg",
   "Galaxy Watch 8":"https://youget.pt/239264-large_default/smartwatch-samsung-galaxy-watch-8-40mm-gps-prateado.jpg",
   "Oppo Watch X":"https://img.pchome.com.tw/cs/items/DYAV3ZA900HAKOX/000001_1716864863.jpg",
 
