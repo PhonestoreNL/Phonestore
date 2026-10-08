@@ -39,7 +39,7 @@ const productImages = {
   "Apple Watch serie 10":"https://www.machines.com.my/cdn/shop/files/Apple_Watch_Series_10_46mm_GPS_Jet_Black_Aluminum_Sport_Band_Black_PDP_Image_Position_1__GBEN_77823829-f473-40ab-818d-07258bf4a524.jpg?v=1727184931",
   "Apple Watch serie 11":"https://vsprod.vijaysales.com/media/catalog/product/a/p/apple_watch_series_11_42mm_gps_jet_black_aluminum_sport_band_black_pdp_image_position_1__en-in_5.jpg?fit=bounds&height=500&optimize=medium&width=500",
   "Apple Watch SE 3":"https://media.binglee.com.au/cdn-cgi/image/fit%3Dscale-down%2Cf%3Dauto%2Cw%3D1079/a/f/8/3/af83fb2f9cbedb515b33a422f4c08a78cbfce5f9_Apple_MEH54XA_Smart_Watches_Hero_1.jpg",
-  "Apple Watch Ultra 3":"https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MG9K4ref_VW_34FR%2Bwatch-case-49-titanium-black-ultra3_VW_34FR%2Bwatch-face-49-alpine-ultra3_VW_34FR_GEO_US?.v=Z0VDUjM1WHl2WkprT2lXU0lRQWRHM2pDV2hhem5qNnpDenFtKzI1OXdzWjRaeVR4RW9XWXhWVHRHeXZEa3AwcDZpTzZlS09Bd0x4ZHpLanhpRFM3bEhJeTlvZUg2NDJab29oaTJoOXRFQXFrN2hMODArNDBKaEpIbGhiMk9pVXhiMGNjdzZmeHloYWdnMkE2TWp3Yjd0QklvcVdBUUxGZWFmZVdmUjUwQ0lUelNhcHpDQzNBbDNPVVgwUDlHeEpzMWs3YlppMnB3dVZOcTdaMkpaOGQvdw&fmt=png-alpha&hei=2000&wid=2000",
+  "Apple Watch Ultra 3":"https://www.humac.dk/sites/default/files/product-images/2025-09/Apple_Watch_Ultra_3_49mm_LTE_Natural_Titanium_Ocean_Band_Anchor_Blue_PDP_Image_Position_1__WWEN.jpg",
   "Galaxy Watch 8":"https://youget.pt/239264-large_default/smartwatch-samsung-galaxy-watch-8-40mm-gps-prateado.jpg",
   "Oppo Watch X":"https://img.pchome.com.tw/cs/items/DYAV3ZA900HAKOX/000001_1716864863.jpg",
 
