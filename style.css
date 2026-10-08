@@ -590,3 +590,18 @@ body .detail-card{
   border-color:#1597ff!important;
   color:#fff!important;
 }
+
+
+/* Tekst in de blauwe informatieblokken zwart */
+body .info-card,
+body .detail-card{
+  color:#000!important;
+}
+body .info-card h3,
+body .detail-card h3,
+body .info-card p,
+body .detail-card p,
+body .info-card .number,
+body .detail-card strong{
+  color:#000!important;
+}
