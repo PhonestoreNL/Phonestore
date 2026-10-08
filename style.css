@@ -169,3 +169,8 @@ a{color:inherit;text-decoration:none}
   .screen-logo{width:68px}
   .catalog-group[data-category-group="tablets"] .screen-logo{width:92px}
 }
+
+/* Prijs netjes direct onder de productnaam */
+.catalog-card h4{margin:0 0 4px;line-height:1.25}
+.catalog-card .product-brand{display:block;margin:0 0 4px;color:var(--muted);font-size:.84rem}
+.catalog-card .product-price{position:static!important;display:block!important;margin:0!important;color:var(--blue)!important;font-size:1.08rem!important;font-weight:900!important}
