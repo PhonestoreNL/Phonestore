@@ -512,3 +512,26 @@ body .detail-card p{
 .detail-card p{
   color:#c9dff2!important;
 }
+
+
+/* Definitieve blauwe binnenkant van de informatieblokken */
+.page-panel:not(#panel-home) .info-card,
+.page-panel:not(#panel-home) .detail-card,
+body .info-card,
+body .detail-card{
+  background:#0d2947!important;
+  color:#fff!important;
+  border:1px solid #21486b!important;
+}
+.page-panel:not(#panel-home) .info-card h3,
+.page-panel:not(#panel-home) .detail-card h3,
+body .info-card h3,
+body .detail-card h3{
+  color:#fff!important;
+}
+.page-panel:not(#panel-home) .info-card p,
+.page-panel:not(#panel-home) .detail-card p,
+body .info-card p,
+body .detail-card p{
+  color:#c9dff2!important;
+}
