@@ -8,23 +8,33 @@
   <link rel="stylesheet" href="style.css?v=20261008">
 </head>
 <body>
-<header class="site-header"><div class="header-inner"><a class="brand" href="https://phonestorenl.github.io/Phonestore/index.html?v=20261008" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/PhonestoreNL/Phonestore/main/Phonestore%20logo.png" alt="PhoneStore"></a><button class="menu-button" type="button" aria-label="Menu openen" aria-expanded="false">☰</button><nav class="nav" aria-label="Hoofdnavigatie">
-  <a class="active" href="https://phonestorenl.github.io/Phonestore/index.html?v=20261008" target="_blank" rel="noopener">Home</a>
-  <a href="https://phonestorenl.github.io/Phonestore/over-ons.html?v=20261008" target="_blank" rel="noopener">Over ons</a>
-  <a href="https://phonestorenl.github.io/Phonestore/assortiment.html?v=20261008" target="_blank" rel="noopener">Assortiment</a>
-  <a href="https://phonestorenl.github.io/Phonestore/waarom.html?v=20261008" target="_blank" rel="noopener">Waarom PhoneStore</a>
-  <a href="https://phonestorenl.github.io/Phonestore/team.html?v=20261008" target="_blank" rel="noopener">Ons team</a>
-  <a href="https://phonestorenl.github.io/Phonestore/contact.html?v=20261008" target="_blank" rel="noopener">Contact</a>
-</nav></div></header>
-<main>
-<section id="home" class="hero">
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#home" data-tab="home" aria-label="PhoneStore Home">
+      <img src="https://raw.githubusercontent.com/PhonestoreNL/Phonestore/main/Phonestore%20logo.png" alt="PhoneStore">
+    </a>
+    <button class="menu-button" type="button" aria-label="Menu openen" aria-expanded="false">☰</button>
+    <nav class="nav" aria-label="Hoofdnavigatie">
+      <a class="active" href="#home" data-tab="home">Home</a>
+      <a href="#over-ons" data-tab="over-ons">Over ons</a>
+      <a href="#assortiment" data-tab="assortiment">Assortiment</a>
+      <a href="#waarom" data-tab="waarom">Waarom PhoneStore</a>
+      <a href="#team" data-tab="team">Ons team</a>
+      <a href="#contact" data-tab="contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="tab-content">
+  <section class="page-panel active" id="panel-home" data-panel="home">
+    <section class="hero">
       <div class="hero-overlay"></div>
       <div class="hero-inner">
         <div class="hero-copy">
           <p class="eyebrow">WELKOM BIJ PHONESTORE</p>
           <h1>De beste telefoons<br>en accessoires,<br><span>alles op één plek.</span></h1>
           <p class="hero-text">Bij PhoneStore vind je smartphones en telefoonaccessoires. Persoonlijk advies, goede service en betaalbare producten staan bij ons voorop.</p>
-          <a class="button button-primary" href="#assortiment">Bekijk ons assortiment <span>→</span></a>
+          <a class="button button-primary" href="#assortiment" data-tab="assortiment">Bekijk ons assortiment <span>→</span></a>
         </div>
         <div class="hero-visual" aria-label="PhoneStore telefoondesign">
           <div class="glow glow-one"></div>
@@ -52,17 +62,55 @@
         </div>
       </div>
     </section>
-<section class="benefits" aria-label="Waarom PhoneStore">
+    <section class="benefits" aria-label="Waarom PhoneStore">
       <div><span class="benefit-icon">◉</span><div><strong>Persoonlijk advies</strong><small>Een keuze die bij je past</small></div></div>
       <div><span class="benefit-icon">✓</span><div><strong>Goede service</strong><small>Klantgericht en bereikbaar</small></div></div>
       <div><span class="benefit-icon">€</span><div><strong>Betaalbare prijzen</strong><small>Concurrerend en laagdrempelig</small></div></div>
       <div><span class="benefit-icon">▦</span><div><strong>Breed assortiment</strong><small>Telefoons en accessoires</small></div></div>
     </section>
+  </section>
+
+  <section class="page-panel" id="panel-over-ons" data-panel="over-ons">
+    <section class="inner-hero"><div class="inner-wrap"><p class="eyebrow">PHONESTORE</p><h1>Wie zijn wij?</h1><p>PhoneStore verkoopt smartphones en telefoonaccessoires en wil klanten helpen bij het kiezen van een telefoon die past bij hun wensen en budget.</p></div></section>
+    <section class="inner-section"><div class="inner-wrap two-col"><div><p class="eyebrow">ONS BEDRIJF</p><h2>Persoonlijk advies staat centraal.</h2><p>PhoneStore wil klanten op één plek voorzien van telefoons en accessoires die bij hun wensen en budget passen. Persoonlijk advies, goede service en betaalbare producten zijn belangrijke onderdelen van onze missie.</p></div><div class="detail-card"><h3>Onze gegevens</h3><p><strong>Bedrijfsnaam</strong> PhoneStore BV</p><p><strong>Vestigingsplaats</strong> Eindhoven</p><p><strong>Adres</strong> Sterrenlaan 8, Eindhoven</p><p><strong>Doelgroep</strong> Jongeren van 14 tot 30 jaar</p></div></div></section>
+    <section class="inner-section soft"><div class="inner-wrap three-col"><article class="info-card"><span class="number">01</span><h3>Missie</h3><p>Klanten op één plek voorzien van telefoons en accessoires met persoonlijk advies, goede service en betaalbare producten.</p></article><article class="info-card"><span class="number">02</span><h3>Visie</h3><p>Uitgroeien tot een stabiel en succesvol telefoonbedrijf dat met nieuwe ontwikkelingen meegaat en goed naar klanten luistert.</p></article><article class="info-card"><span class="number">03</span><h3>Doelgroep</h3><p>Voornamelijk jongeren en volwassenen van 14 tot 30 jaar die een telefoon of accessoires nodig hebben.</p></article></div></section>
+  </section>
+
+  <section class="page-panel" id="panel-assortiment" data-panel="assortiment">
+    <section class="inner-hero"><div class="inner-wrap"><p class="eyebrow">PHONESTORE</p><h1>Ons assortiment</h1><p>Een overzicht van de producten van PhoneStore. Deze pagina is informatief en heeft geen winkelmand of bestelknop.</p></div></section>
+    <section class="inner-section"><div class="inner-wrap product-page-grid">
+      <article class="product-box"><h3>Smartphones</h3><div class="chips"><span>iPhone 15</span><span>iPhone 16</span><span>iPhone 17</span><span>Galaxy S25+</span><span>Galaxy Z Flip 7</span><span>Galaxy A56</span><span>Oppo Find X9</span><span>Oppo A5 Pro</span><span>Oppo Reno 14</span></div></article>
+      <article class="product-box"><h3>Audio</h3><div class="chips"><span>AirPods 4</span><span>AirPods Pro</span><span>AirPods Max</span><span>Samsung Buds 4 Pro</span><span>Oppo Enco X3</span></div></article>
+      <article class="product-box"><h3>Tablets</h3><div class="chips"><span>iPad A16</span><span>iPad M2</span><span>iPad A17 Pro</span><span>Galaxy Tab S10+</span><span>Oppo Pad 3</span></div></article>
+      <article class="product-box"><h3>Smartwatches</h3><div class="chips"><span>Apple Watch serie 10</span><span>Apple Watch serie 11</span><span>Apple Watch SE 3</span><span>Apple Watch Ultra 3</span><span>Galaxy Watch 8</span><span>Oppo Watch X</span></div></article>
+      <article class="product-box"><h3>Screenprotectors</h3><div class="chips"><span>iPhone 15</span><span>iPhone 16</span><span>iPhone 17</span><span>Galaxy S25+</span><span>Galaxy Z Flip 7</span><span>Galaxy A56</span><span>Oppo Find X9</span><span>Oppo A5 Pro</span><span>Oppo Reno 14</span></div></article>
+      <article class="product-box"><h3>Overige accessoires</h3><div class="chips"><span>Powerbank zwart 20.000 mAh</span><span>Powerbank roze 20.000 mAh</span><span>Powerbank groen 20.000 mAh</span><span>Apple oplader USB-C</span><span>Samsung oplader USB-C</span><span>Oppo oplader USB-C</span></div></article>
+    </div></section>
+  </section>
+
+  <section class="page-panel" id="panel-waarom" data-panel="waarom">
+    <section class="inner-hero"><div class="inner-wrap"><p class="eyebrow">PHONESTORE</p><h1>Waarom kiezen voor PhoneStore?</h1><p>Ons concurrentievoordeel is persoonlijke service en advies combineren met betaalbare producten, acties en kortingen.</p></div></section>
+    <section class="inner-section"><div class="inner-wrap three-col"><article class="info-card featured"><span class="number">01</span><h3>Persoonlijk advies</h3><p>Door goed naar klanten te luisteren willen we helpen bij het kiezen van een telefoon of accessoire die bij hen past.</p></article><article class="info-card"><span class="number">02</span><h3>Goede service</h3><p>Klantenservice, persoonlijk contact en bereikbaar zijn zijn belangrijke onderdelen van de manier waarop PhoneStore wil werken.</p></article><article class="info-card"><span class="number">03</span><h3>Betaalbaar</h3><p>PhoneStore richt zich op betaalbare en concurrerende prijzen en wil regelmatig acties en kortingen aanbieden.</p></article></div></section>
+    <section class="inner-section soft"><div class="inner-wrap"><p class="eyebrow">ONZE AANPAK</p><h2>Luisteren → adviseren → helpen.</h2><div class="steps"><article><span>01</span><h3>Luisteren</h3><p>Begrijpen wat de klant nodig heeft.</p></article><article><span>02</span><h3>Adviseren</h3><p>Helpen bij de keuze uit telefoons en accessoires.</p></article><article><span>03</span><h3>Service</h3><p>Goede klantenservice en aantrekkelijke acties.</p></article></div></div></section>
+  </section>
+
+  <section class="page-panel" id="panel-team" data-panel="team">
+    <section class="inner-hero"><div class="inner-wrap"><p class="eyebrow">PHONESTORE</p><h1>De ondernemers achter PhoneStore</h1><p>Bram, Vienna, Givano, Rink en Mick starten PhoneStore samen als BV.</p></div></section>
+    <section class="inner-section"><div class="inner-wrap team-grid-full"><article class="team-card"><div class="avatar">B</div><h3>Bram</h3><p>Administratie • Websitebeheer</p></article><article class="team-card"><div class="avatar">V</div><h3>Vienna</h3><p>Verkoop</p></article><article class="team-card"><div class="avatar">G</div><h3>Givano</h3><p>Inkoop</p></article><article class="team-card"><div class="avatar">R</div><h3>Rink</h3><p>Klantenservice</p></article><article class="team-card"><div class="avatar">M</div><h3>Mick</h3><p>Marketing / social media</p></article></div></section>
+  </section>
+
+  <section class="page-panel" id="panel-contact" data-panel="contact">
+    <section class="inner-hero"><div class="inner-wrap"><p class="eyebrow">PHONESTORE</p><h1>Contact met PhoneStore</h1><p>Onze onderneming is gevestigd aan Sterrenlaan 8 in Eindhoven.</p></div></section>
+    <section class="inner-section"><div class="inner-wrap contact-page-grid"><div class="contact-card"><p class="eyebrow">NEEM CONTACT OP</p><h2>PhoneStore Eindhoven</h2><p>Voor contact kun je ons mailen via het e-mailadres hieronder.</p><a class="button button-primary" href="mailto:Phonestore@summacollege.onmicrosoft.com">Mail PhoneStore →</a></div><div class="contact-list"><div><span>Adres</span><strong>Sterrenlaan 8<br>Eindhoven</strong></div><div><span>E-mail</span><strong><a href="mailto:Phonestore@summacollege.onmicrosoft.com">Phonestore@summacollege.onmicrosoft.com</a></strong></div><div><span>Startdatum</span><strong>24-09-2026</strong></div><div><span>Rechtsvorm</span><strong>BV</strong></div></div></div></section>
+    <section class="map-wrap"><iframe title="Kaart van Sterrenlaan 8 in Eindhoven" loading="lazy" src="https://www.google.com/maps?q=Sterrenlaan+8,+Eindhoven&output=embed"></iframe></section>
+  </section>
 </main>
+
 <footer class="site-footer">
-    <strong>PHONESTORE</strong>
-    <span>Smart Choices. Better Tomorrow. • Eindhoven</span>
-  </footer>
-<script src="script.js"></script>
+  <strong>PHONESTORE</strong>
+  <span>Smart Choices. Better Tomorrow. • Eindhoven</span>
+</footer>
+
+<script src="script.js?v=20261008"></script>
 </body>
 </html>
