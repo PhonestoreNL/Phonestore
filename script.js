@@ -210,6 +210,8 @@ const productPageImage = document.querySelector('#single-product-image');
 const productPageName = document.querySelector('#single-product-name');
 const productPageBrand = document.querySelector('#single-product-brand');
 const productPagePrice = document.querySelector('#single-product-price');
+const productPagePayment = document.querySelector('#single-product-payment');
+const iphone15PaymentUrl = 'https://nl.penworldwide.org/buybuttons/nl01114/btn/7b961a93-d205-4d6c-a71c-ace218c286b9/';
 
 if (productPageImage && productPageName) {
   const productParam = new URLSearchParams(window.location.search).get('product') || '';
@@ -220,6 +222,10 @@ if (productPageImage && productPageName) {
     productPageName.textContent = productData;
     productPageBrand.textContent = brand;
     productPagePrice.textContent = price;
+    if (productPagePayment) {
+      productPagePayment.hidden = productData !== 'iPhone 15';
+      productPagePayment.href = iphone15PaymentUrl;
+    }
     productPageImage.src = productImages[productData];
     productPageImage.alt = productData;
     document.title = productData + ' | Phonestore';
