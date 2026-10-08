@@ -137,3 +137,6 @@ a{color:inherit;text-decoration:none}
 .product-detail-price strong{font-size:1.7rem;color:#74beff}
 @media(max-width:900px){.assortment-picker{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.assortment-picker{grid-template-columns:1fr}.product-detail{display:block}.product-detail-price{align-items:flex-start;margin-top:12px}.product-price{right:16px;bottom:16px}}
+
+.catalog-group{display:none}
+.catalog-group.active{display:block}
