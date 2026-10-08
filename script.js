@@ -262,6 +262,7 @@ if (productPageImage && productPageName) {
   const price = productDetails[productData]?.price || '';
   if (productData && productImages[productData]) {
     productPageName.textContent = productData;
+    document.body.classList.toggle('screenprotector-detail', /screenprotector$/i.test(productData));
     productPageBrand.textContent = brand;
     productPagePrice.textContent = price;
     if (productPagePayment) {
