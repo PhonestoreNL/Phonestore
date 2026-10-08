@@ -136,6 +136,16 @@ document.querySelectorAll('.product-select').forEach(card => {
   });
 });
 
+document.querySelectorAll('[data-product-link]').forEach(button => {
+  button.addEventListener('click', event => {
+    event.preventDefault();
+    event.stopPropagation();
+    const card = button.closest('.product-select');
+    const name = card?.dataset.product || '';
+    if (name) window.location.href = 'product.html?product=' + encodeURIComponent(name);
+  });
+});
+
 document.querySelectorAll('.product-select').forEach(card => {
   const image = card.querySelector('.product-img');
   const name = card.dataset.product || card.querySelector('h4')?.textContent || '';
@@ -151,6 +161,29 @@ document.querySelectorAll('.product-select').forEach(card => {
     }, {once:true});
   }
 });
+
+
+const productPageImage = document.querySelector('#single-product-image');
+const productPageName = document.querySelector('#single-product-name');
+const productPageBrand = document.querySelector('#single-product-brand');
+const productPagePrice = document.querySelector('#single-product-price');
+
+if (productPageImage && productPageName) {
+  const productParam = new URLSearchParams(window.location.search).get('product') || '';
+  const productCard = Array.from(document.querySelectorAll('.product-select')).find(card => (card.dataset.product || '') === productParam);
+  const productData = productParam || productCard?.dataset.product || '';
+  const sourceCard = productCard;
+  const brand = sourceCard?.querySelector('.product-brand')?.textContent || '';
+  const price = sourceCard?.querySelector('.product-price')?.textContent || '';
+  if (productData && productImages[productData]) {
+    productPageName.textContent = productData;
+    productPageBrand.textContent = brand;
+    productPagePrice.textContent = price;
+    productPageImage.src = productImages[productData];
+    productPageImage.alt = productData;
+    document.title = productData + ' | Phonestore';
+  }
+}
 
 const startTab = window.location.hash.replace('#', '');
 showTab(startTab || 'home', false);
