@@ -605,3 +605,10 @@ body .info-card .number,
 body .detail-card strong{
   color:#000!important;
 }
+
+
+/* Over ons: alle tekst in Missie, Visie en Doelgroep zwart */
+body .inner-section.soft .info-card,
+body .inner-section.soft .info-card *{
+  color:#000!important;
+}
