@@ -152,3 +152,8 @@ a{color:inherit;text-decoration:none}
 .catalog-card h4{font-size:1.1rem;margin-bottom:7px}
 .catalog-card .product-brand{font-size:.84rem;color:var(--muted);margin-bottom:3px}
 .catalog-card .product-price{position:static;display:block;font-size:1.08rem!important;color:var(--blue)!important;font-weight:900}
+
+.product-image-wrap{position:relative;height:200px;margin:-2px 0 16px;display:grid;place-items:center;border-radius:14px;overflow:hidden;background:#fff}
+.product-img{display:block;width:100%;height:200px;object-fit:contain}
+.product-logo{position:absolute;right:10px;bottom:10px;width:48px;height:auto;max-height:34px;object-fit:contain;background:rgba(255,255,255,.94);padding:4px 6px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.14)}
+.product-img.image-failed{opacity:.2}
