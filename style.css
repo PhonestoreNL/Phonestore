@@ -545,3 +545,13 @@ body .detail-card p{
   color:#fff!important;
   border-color:#2a5f8f!important;
 }
+
+
+/* Exact dezelfde donkere Home-kleur voor alle informatieblokken */
+.info-card,
+.info-card.featured,
+.detail-card{
+  background:var(--navy)!important;
+  color:#fff!important;
+  border-color:#243448!important;
+}
