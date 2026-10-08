@@ -645,3 +645,21 @@ body .why-card span,
 body .why-card .number{
   color:#000!important;
 }
+
+
+/* Contact: vier informatieblokken definitief blauw */
+body .contact-page-grid .contact-list > div,
+body .contact-list > div{
+  background:#1597ff!important;
+  background-image:none!important;
+  color:#000!important;
+  border-color:#1597ff!important;
+}
+body .contact-page-grid .contact-list > div span,
+body .contact-page-grid .contact-list > div strong,
+body .contact-page-grid .contact-list > div strong a,
+body .contact-list > div span,
+body .contact-list > div strong,
+body .contact-list > div strong a{
+  color:#000!important;
+}
