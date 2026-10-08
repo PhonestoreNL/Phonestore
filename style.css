@@ -277,3 +277,30 @@ a{color:inherit;text-decoration:none}
     white-space:normal;
   }
 }
+
+
+/* Productdetail: lange namen zoals "iPhone 15 screenprotector" blijven binnen het rechtervak */
+.single-product-card > *{
+  min-width:0;
+}
+.single-product-info{
+  min-width:0;
+  overflow:hidden;
+}
+.single-product-info h1,
+#single-product-name{
+  display:block;
+  width:100%;
+  max-width:100%;
+  min-width:0;
+  overflow-wrap:anywhere;
+  word-break:normal;
+  white-space:normal;
+  font-size:clamp(2rem,4vw,3.8rem);
+}
+@media(max-width:760px){
+  .single-product-info h1,
+  #single-product-name{
+    font-size:clamp(2rem,9vw,3rem);
+  }
+}
