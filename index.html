@@ -77,98 +77,106 @@
   </section>
 
   <section class="page-panel" id="panel-assortiment" data-panel="assortiment">
-    <section class="inner-hero"><div class="inner-wrap"><p class="eyebrow">PHONESTORE</p><h1>Ons assortiment</h1><p>Bekijk ons volledige assortiment smartphones, audio, tablets, smartwatches en accessoires.</p></div></section>
+    <section class="inner-hero"><div class="inner-wrap"><p class="eyebrow">PHONESTORE</p><h1>Ons assortiment</h1><p>Bekijk eerst het assortiment dat jullie zoeken. Daarna krijg je de producten binnen die categorie te zien.</p></div></section>
+
     <section class="inner-section">
       <div class="inner-wrap">
-        <div class="catalog-intro">
-          <div><p class="eyebrow">PRODUCTEN</p><h2>Alles voor je telefoon.</h2></div>
-          <p>Van smartphones van Apple, Samsung en Oppo tot oortjes, tablets, smartwatches en handige accessoires.</p>
+        <div class="catalog-intro catalog-overview">
+          <div><p class="eyebrow">ASSORTIMENTEN</p><h2>Kies een assortiment.</h2></div>
+          <p>Klik op een categorie om de bijbehorende producten te bekijken. Op deze website kun je informatie bekijken; er is geen betaling of bestelling.</p>
         </div>
 
-        <div class="assortment-picker" role="tablist" aria-label="Assortiment kiezen">
-          <button class="assortment-tab active" type="button" role="tab" aria-selected="true" data-category="smartphones"><span>01</span><strong>Smartphones</strong><small>Apple, Samsung & Oppo</small></button>
-          <button class="assortment-tab" type="button" role="tab" aria-selected="false" data-category="audio"><span>02</span><strong>Audio</strong><small>AirPods & oortjes</small></button>
-          <button class="assortment-tab" type="button" role="tab" aria-selected="false" data-category="tablets"><span>03</span><strong>Tablets</strong><small>iPad, Galaxy & Oppo</small></button>
-          <button class="assortment-tab" type="button" role="tab" aria-selected="false" data-category="smartwatches"><span>04</span><strong>Smartwatches</strong><small>Apple, Samsung & Oppo</small></button>
-          <button class="assortment-tab" type="button" role="tab" aria-selected="false" data-category="screenprotectors"><span>05</span><strong>Screenprotectors</strong><small>Voor verschillende modellen</small></button>
-          <button class="assortment-tab" type="button" role="tab" aria-selected="false" data-category="accessoires"><span>06</span><strong>Overige accessoires</strong><small>Powerbanks & opladers</small></button>
+        <div class="assortment-picker catalog-overview" role="list" aria-label="Assortimenten">
+          <button class="assortment-tab" type="button" data-category="smartphones"><span>01</span><strong>Smartphones</strong><small>Apple, Samsung & Oppo</small></button>
+          <button class="assortment-tab" type="button" data-category="audio"><span>02</span><strong>Audio</strong><small>AirPods & oortjes</small></button>
+          <button class="assortment-tab" type="button" data-category="tablets"><span>03</span><strong>Tablets</strong><small>iPad, Galaxy & Oppo</small></button>
+          <button class="assortment-tab" type="button" data-category="smartwatches"><span>04</span><strong>Smartwatches</strong><small>Apple, Samsung & Oppo</small></button>
+          <button class="assortment-tab" type="button" data-category="screenprotectors"><span>05</span><strong>Screenprotectors</strong><small>Voor verschillende modellen</small></button>
+          <button class="assortment-tab" type="button" data-category="accessoires"><span>06</span><strong>Overige accessoires</strong><small>Powerbanks & opladers</small></button>
         </div>
-        <div class="selected-category-label"><p class="eyebrow">GEKOZEN ASSORTIMENT</p><h3 id="selected-category-title">Smartphones</h3></div>
-        <div class="product-detail" id="selected-product" aria-live="polite" hidden><div><p class="eyebrow">GEKOZEN PRODUCT</p><h3 id="selected-product-name">Kies een product</h3><p id="selected-product-brand"></p></div><div class="product-detail-price"><span>Verkoopprijs</span><strong id="selected-product-price">—</strong></div></div>
 
-        <div class="catalog-group active" data-category-group="smartphones">
-          <div class="catalog-heading"><span class="catalog-icon">⌁</span><div><h3>Smartphones</h3><p>Apple, Samsung en Oppo</p></div></div>
-          <div class="catalog-grid">
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="iPhone 15"><span class="catalog-code">PS1.001</span><h4>iPhone 15</h4><span class="product-brand">Apple</span><span class="product-price">€ 549</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="iPhone 16"><span class="catalog-code">PS1.002</span><h4>iPhone 16</h4><span class="product-brand">Apple</span><span class="product-price">€ 599</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="iPhone 17"><span class="catalog-code">PS1.003</span><h4>iPhone 17</h4><span class="product-brand">Apple</span><span class="product-price">€ 749</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="Galaxy S25+"><span class="catalog-code">PS1.004</span><h4>Galaxy S25+</h4><span class="product-brand">Samsung</span><span class="product-price">€ 749</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="Galaxy Z Flip 7"><span class="catalog-code">PS1.005</span><h4>Galaxy Z Flip 7</h4><span class="product-brand">Samsung</span><span class="product-price">€ 849</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="Galaxy A56"><span class="catalog-code">PS1.006</span><h4>Galaxy A56</h4><span class="product-brand">Samsung</span><span class="product-price">€ 349</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="Oppo Find X9"><span class="catalog-code">PS1.007</span><h4>Oppo Find X9</h4><span class="product-brand">Oppo</span><span class="product-price">€ 849</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="Oppo A5 Pro"><span class="catalog-code">PS1.008</span><h4>Oppo A5 Pro</h4><span class="product-brand">Oppo</span><span class="product-price">€ 229</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="Oppo Reno 14"><span class="catalog-code">PS1.009</span><h4>Oppo Reno 14</h4><span class="product-brand">Oppo</span><span class="product-price">€ 499</span></article>
+        <div class="catalog-products-view">
+          <button class="catalog-back" type="button" id="back-to-assortments">← Terug naar assortimenten</button>
+          <div class="selected-category-label"><p class="eyebrow">ASSORTIMENT</p><h3 id="selected-category-title"></h3></div>
+          <div class="product-detail" id="selected-product" aria-live="polite" hidden>
+            <div><p class="eyebrow">GEKOZEN PRODUCT</p><h3 id="selected-product-name">Kies een product</h3><p id="selected-product-brand"></p></div>
+            <div class="product-detail-price"><span>Verkoopprijs</span><strong id="selected-product-price">—</strong></div>
           </div>
-        </div>
 
-        <div class="catalog-group" data-category-group="audio">
-          <div class="catalog-heading"><span class="catalog-icon">◌</span><div><h3>Audio</h3><p>Oortjes en hoofdtelefoons</p></div></div>
-          <div class="catalog-grid">
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="AirPods 4"><span class="catalog-code">PS2.001</span><h4>AirPods 4</h4><span class="product-brand">Apple</span><span class="product-price">€ 149</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="AirPods Pro"><span class="catalog-code">PS2.002</span><h4>AirPods Pro</h4><span class="product-brand">Apple</span><span class="product-price">€ 249</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="AirPods Max"><span class="catalog-code">PS2.003</span><h4>AirPods Max</h4><span class="product-brand">Apple</span><span class="product-price">€ 519</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="Samsung Buds 4 Pro"><span class="catalog-code">PS2.004</span><h4>Samsung Buds 4 Pro</h4><span class="product-brand">Samsung</span><span class="product-price">€ 199</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="Oppo Enco X3"><span class="catalog-code">PS2.005</span><h4>Oppo Enco X3</h4><span class="product-brand">Oppo</span><span class="product-price">€ 179</span></article>
+          <div class="catalog-group" data-category-group="smartphones">
+            <div class="catalog-heading"><span class="catalog-icon">⌁</span><div><h3>Smartphones</h3><p>Apple, Samsung en Oppo</p></div></div>
+            <div class="catalog-grid">
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="iPhone 15"><span class="catalog-code">PS1.001</span><h4>iPhone 15</h4><span class="product-brand">Apple</span><span class="product-price">€ 549</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="iPhone 16"><span class="catalog-code">PS1.002</span><h4>iPhone 16</h4><span class="product-brand">Apple</span><span class="product-price">€ 599</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="iPhone 17"><span class="catalog-code">PS1.003</span><h4>iPhone 17</h4><span class="product-brand">Apple</span><span class="product-price">€ 749</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="Galaxy S25+"><span class="catalog-code">PS1.004</span><h4>Galaxy S25+</h4><span class="product-brand">Samsung</span><span class="product-price">€ 749</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="Galaxy Z Flip 7"><span class="catalog-code">PS1.005</span><h4>Galaxy Z Flip 7</h4><span class="product-brand">Samsung</span><span class="product-price">€ 849</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="Galaxy A56"><span class="catalog-code">PS1.006</span><h4>Galaxy A56</h4><span class="product-brand">Samsung</span><span class="product-price">€ 349</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="Oppo Find X9"><span class="catalog-code">PS1.007</span><h4>Oppo Find X9</h4><span class="product-brand">Oppo</span><span class="product-price">€ 849</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="Oppo A5 Pro"><span class="catalog-code">PS1.008</span><h4>Oppo A5 Pro</h4><span class="product-brand">Oppo</span><span class="product-price">€ 229</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="Oppo Reno 14"><span class="catalog-code">PS1.009</span><h4>Oppo Reno 14</h4><span class="product-brand">Oppo</span><span class="product-price">€ 499</span></article>
+            </div>
           </div>
-        </div>
 
-        <div class="catalog-group" data-category-group="tablets">
-          <div class="catalog-heading"><span class="catalog-icon">▣</span><div><h3>Tablets</h3><p>Tablets voor werk, school en entertainment</p></div></div>
-          <div class="catalog-grid">
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="iPad A16"><span class="catalog-code">PS3.001</span><h4>iPad A16</h4><span class="product-brand">Apple</span><span class="product-price">€ 449</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="iPad M2"><span class="catalog-code">PS3.002</span><h4>iPad M2</h4><span class="product-brand">Apple</span><span class="product-price">€ 599</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="iPad A17 Pro"><span class="catalog-code">PS3.003</span><h4>iPad A17 Pro</h4><span class="product-brand">Apple</span><span class="product-price">€ 699</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="Galaxy Tab S10+"><span class="catalog-code">PS3.004</span><h4>Galaxy Tab S10+</h4><span class="product-brand">Samsung</span><span class="product-price">€ 749</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="Oppo Pad 3"><span class="catalog-code">PS3.005</span><h4>Oppo Pad 3</h4><span class="product-brand">Oppo</span><span class="product-price">€ 449</span></article>
+          <div class="catalog-group" data-category-group="audio">
+            <div class="catalog-heading"><span class="catalog-icon">◌</span><div><h3>Audio</h3><p>Oortjes en hoofdtelefoons</p></div></div>
+            <div class="catalog-grid">
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="AirPods 4"><span class="catalog-code">PS2.001</span><h4>AirPods 4</h4><span class="product-brand">Apple</span><span class="product-price">€ 149</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="AirPods Pro"><span class="catalog-code">PS2.002</span><h4>AirPods Pro</h4><span class="product-brand">Apple</span><span class="product-price">€ 249</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="AirPods Max"><span class="catalog-code">PS2.003</span><h4>AirPods Max</h4><span class="product-brand">Apple</span><span class="product-price">€ 519</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="Samsung Buds 4 Pro"><span class="catalog-code">PS2.004</span><h4>Samsung Buds 4 Pro</h4><span class="product-brand">Samsung</span><span class="product-price">€ 199</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="Oppo Enco X3"><span class="catalog-code">PS2.005</span><h4>Oppo Enco X3</h4><span class="product-brand">Oppo</span><span class="product-price">€ 179</span></article>
+            </div>
           </div>
-        </div>
 
-        <div class="catalog-group" data-category-group="smartwatches">
-          <div class="catalog-heading"><span class="catalog-icon">◉</span><div><h3>Smartwatches</h3><p>Apple, Samsung en Oppo</p></div></div>
-          <div class="catalog-grid">
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="Apple Watch serie 10"><span class="catalog-code">PS4.001</span><h4>Apple Watch serie 10</h4><span class="product-brand">Apple</span><span class="product-price">€ 399</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="Apple Watch serie 11"><span class="catalog-code">PS4.002</span><h4>Apple Watch serie 11</h4><span class="product-brand">Apple</span><span class="product-price">€ 449</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="Apple Watch SE 3"><span class="catalog-code">PS4.003</span><h4>Apple Watch SE 3</h4><span class="product-brand">Apple</span><span class="product-price">€ 249</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="Apple Watch Ultra 3"><span class="catalog-code">PS4.004</span><h4>Apple Watch Ultra 3</h4><span class="product-brand">Apple</span><span class="product-price">€ 749</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="Galaxy Watch 8"><span class="catalog-code">PS4.005</span><h4>Galaxy Watch 8</h4><span class="product-brand">Samsung</span><span class="product-price">€ 349</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="Oppo Watch X"><span class="catalog-code">PS4.006</span><h4>Oppo Watch X</h4><span class="product-brand">Oppo</span><span class="product-price">€ 299</span></article>
+          <div class="catalog-group" data-category-group="tablets">
+            <div class="catalog-heading"><span class="catalog-icon">▣</span><div><h3>Tablets</h3><p>Tablets voor werk, school en entertainment</p></div></div>
+            <div class="catalog-grid">
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="iPad A16"><span class="catalog-code">PS3.001</span><h4>iPad A16</h4><span class="product-brand">Apple</span><span class="product-price">€ 449</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="iPad M2"><span class="catalog-code">PS3.002</span><h4>iPad M2</h4><span class="product-brand">Apple</span><span class="product-price">€ 599</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="iPad A17 Pro"><span class="catalog-code">PS3.003</span><h4>iPad A17 Pro</h4><span class="product-brand">Apple</span><span class="product-price">€ 699</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="Galaxy Tab S10+"><span class="catalog-code">PS3.004</span><h4>Galaxy Tab S10+</h4><span class="product-brand">Samsung</span><span class="product-price">€ 749</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="Oppo Pad 3"><span class="catalog-code">PS3.005</span><h4>Oppo Pad 3</h4><span class="product-brand">Oppo</span><span class="product-price">€ 449</span></article>
+            </div>
           </div>
-        </div>
 
-        <div class="catalog-group" data-category-group="screenprotectors">
-          <div class="catalog-heading"><span class="catalog-icon">✧</span><div><h3>Screenprotectors</h3><p>Voor verschillende modellen</p></div></div>
-          <div class="catalog-grid">
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="iPhone 15 screenprotector"><span class="catalog-code">PS5.001</span><h4>iPhone 15 screenprotector</h4><span class="product-brand">Apple</span><span class="product-price">€ 17,50</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="iPhone 16 screenprotector"><span class="catalog-code">PS5.002</span><h4>iPhone 16 screenprotector</h4><span class="product-brand">Apple</span><span class="product-price">€ 17,50</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="iPhone 17 screenprotector"><span class="catalog-code">PS5.003</span><h4>iPhone 17 screenprotector</h4><span class="product-brand">Apple</span><span class="product-price">€ 17,50</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="Galaxy S25+ screenprotector"><span class="catalog-code">PS5.004</span><h4>Galaxy S25+ screenprotector</h4><span class="product-brand">Samsung</span><span class="product-price">€ 17,50</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="Galaxy Z Flip 7 screenprotector"><span class="catalog-code">PS5.005</span><h4>Galaxy Z Flip 7 screenprotector</h4><span class="product-brand">Samsung</span><span class="product-price">€ 17,50</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="Galaxy A56 screenprotector"><span class="catalog-code">PS5.006</span><h4>Galaxy A56 screenprotector</h4><span class="product-brand">Samsung</span><span class="product-price">€ 17,50</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="Oppo Find X9 screenprotector"><span class="catalog-code">PS5.007</span><h4>Oppo Find X9 screenprotector</h4><span class="product-brand">Oppo</span><span class="product-price">€ 17,50</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="Oppo A5 Pro screenprotector"><span class="catalog-code">PS5.008</span><h4>Oppo A5 Pro screenprotector</h4><span class="product-brand">Oppo</span><span class="product-price">€ 17,50</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="Oppo Reno 14 screenprotector"><span class="catalog-code">PS5.009</span><h4>Oppo Reno 14 screenprotector</h4><span class="product-brand">Oppo</span><span class="product-price">€ 17,50</span></article>
+          <div class="catalog-group" data-category-group="smartwatches">
+            <div class="catalog-heading"><span class="catalog-icon">◉</span><div><h3>Smartwatches</h3><p>Apple, Samsung en Oppo</p></div></div>
+            <div class="catalog-grid">
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="Apple Watch serie 10"><span class="catalog-code">PS4.001</span><h4>Apple Watch serie 10</h4><span class="product-brand">Apple</span><span class="product-price">€ 399</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="Apple Watch serie 11"><span class="catalog-code">PS4.002</span><h4>Apple Watch serie 11</h4><span class="product-brand">Apple</span><span class="product-price">€ 449</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="Apple Watch SE 3"><span class="catalog-code">PS4.003</span><h4>Apple Watch SE 3</h4><span class="product-brand">Apple</span><span class="product-price">€ 249</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="Apple Watch Ultra 3"><span class="catalog-code">PS4.004</span><h4>Apple Watch Ultra 3</h4><span class="product-brand">Apple</span><span class="product-price">€ 749</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="Galaxy Watch 8"><span class="catalog-code">PS4.005</span><h4>Galaxy Watch 8</h4><span class="product-brand">Samsung</span><span class="product-price">€ 349</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="Oppo Watch X"><span class="catalog-code">PS4.006</span><h4>Oppo Watch X</h4><span class="product-brand">Oppo</span><span class="product-price">€ 299</span></article>
+            </div>
           </div>
-        </div>
 
-        <div class="catalog-group" data-category-group="accessoires">
-          <div class="catalog-heading"><span class="catalog-icon">+</span><div><h3>Overige accessoires</h3><p>Powerbanks en opladers</p></div></div>
-          <div class="catalog-grid">
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="Powerbank zwart 20.000 mAh"><span class="catalog-code">PS5.010</span><h4>Powerbank zwart 20.000 mAh</h4><span class="product-brand">Accessoire</span><span class="product-price">€ 30</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="Powerbank roze 20.000 mAh"><span class="catalog-code">PS5.011</span><h4>Powerbank roze 20.000 mAh</h4><span class="product-brand">Accessoire</span><span class="product-price">€ 30</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="Powerbank groen 20.000 mAh"><span class="catalog-code">PS5.012</span><h4>Powerbank groen 20.000 mAh</h4><span class="product-brand">Accessoire</span><span class="product-price">€ 30</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="Apple oplader USB-C"><span class="catalog-code">PS5.013</span><h4>Apple oplader USB-C</h4><span class="product-brand">Apple</span><span class="product-price">€ 24,99</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="Samsung oplader USB-C"><span class="catalog-code">PS5.014</span><h4>Samsung oplader USB-C</h4><span class="product-brand">Samsung</span><span class="product-price">€ 17,50</span></article>
-            <article class="catalog-card product-select" tabindex="0" role="button" data-product="Oppo oplader USB-C"><span class="catalog-code">PS5.015</span><h4>Oppo oplader USB-C</h4><span class="product-brand">Oppo</span><span class="product-price">€ 29,99</span></article>
+          <div class="catalog-group" data-category-group="screenprotectors">
+            <div class="catalog-heading"><span class="catalog-icon">✧</span><div><h3>Screenprotectors</h3><p>Voor verschillende modellen</p></div></div>
+            <div class="catalog-grid">
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="iPhone 15 screenprotector"><span class="catalog-code">PS5.001</span><h4>iPhone 15 screenprotector</h4><span class="product-brand">Apple</span><span class="product-price">€ 17,50</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="iPhone 16 screenprotector"><span class="catalog-code">PS5.002</span><h4>iPhone 16 screenprotector</h4><span class="product-brand">Apple</span><span class="product-price">€ 17,50</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="iPhone 17 screenprotector"><span class="catalog-code">PS5.003</span><h4>iPhone 17 screenprotector</h4><span class="product-brand">Apple</span><span class="product-price">€ 17,50</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="Galaxy S25+ screenprotector"><span class="catalog-code">PS5.004</span><h4>Galaxy S25+ screenprotector</h4><span class="product-brand">Samsung</span><span class="product-price">€ 17,50</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="Galaxy Z Flip 7 screenprotector"><span class="catalog-code">PS5.005</span><h4>Galaxy Z Flip 7 screenprotector</h4><span class="product-brand">Samsung</span><span class="product-price">€ 17,50</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="Galaxy A56 screenprotector"><span class="catalog-code">PS5.006</span><h4>Galaxy A56 screenprotector</h4><span class="product-brand">Samsung</span><span class="product-price">€ 17,50</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="Oppo Find X9 screenprotector"><span class="catalog-code">PS5.007</span><h4>Oppo Find X9 screenprotector</h4><span class="product-brand">Oppo</span><span class="product-price">€ 17,50</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="Oppo A5 Pro screenprotector"><span class="catalog-code">PS5.008</span><h4>Oppo A5 Pro screenprotector</h4><span class="product-brand">Oppo</span><span class="product-price">€ 17,50</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="Oppo Reno 14 screenprotector"><span class="catalog-code">PS5.009</span><h4>Oppo Reno 14 screenprotector</h4><span class="product-brand">Oppo</span><span class="product-price">€ 17,50</span></article>
+            </div>
+          </div>
+
+          <div class="catalog-group" data-category-group="accessoires">
+            <div class="catalog-heading"><span class="catalog-icon">+</span><div><h3>Overige accessoires</h3><p>Powerbanks en opladers</p></div></div>
+            <div class="catalog-grid">
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="Powerbank zwart 20.000 mAh"><span class="catalog-code">PS5.010</span><h4>Powerbank zwart 20.000 mAh</h4><span class="product-brand">Accessoire</span><span class="product-price">€ 30</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="Powerbank roze 20.000 mAh"><span class="catalog-code">PS5.011</span><h4>Powerbank roze 20.000 mAh</h4><span class="product-brand">Accessoire</span><span class="product-price">€ 30</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="Powerbank groen 20.000 mAh"><span class="catalog-code">PS5.012</span><h4>Powerbank groen 20.000 mAh</h4><span class="product-brand">Accessoire</span><span class="product-price">€ 30</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="Apple oplader USB-C"><span class="catalog-code">PS5.013</span><h4>Apple oplader USB-C</h4><span class="product-brand">Apple</span><span class="product-price">€ 24,99</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="Samsung oplader USB-C"><span class="catalog-code">PS5.014</span><h4>Samsung oplader USB-C</h4><span class="product-brand">Samsung</span><span class="product-price">€ 17,50</span></article>
+              <article class="catalog-card product-select" tabindex="0" role="button" data-product="Oppo oplader USB-C"><span class="catalog-code">PS5.015</span><h4>Oppo oplader USB-C</h4><span class="product-brand">Oppo</span><span class="product-price">€ 29,99</span></article>
+            </div>
           </div>
         </div>
       </div>
